@@ -2,7 +2,6 @@
 title: "1.1 - 1D Motion"
 layout: default
 ---
-# Information: 1D Motion
 
 ## 1. Introduction to the Unit: Kinematics
 
