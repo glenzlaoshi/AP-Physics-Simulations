@@ -2,7 +2,7 @@
 title: "1.2 - Projectile Motion"
 layout: default
 ---
-# Information: 2D Projectile Motion
+
 
 ## 1. Introduction to the Unit: 2D Kinematics
 
