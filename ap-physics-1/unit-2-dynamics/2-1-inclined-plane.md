@@ -2,7 +2,6 @@
 title: "2.1 - Forces on an Inclined Plane"
 layout: default
 ---
-# Information: Forces on an Inclined Plane
 
 ## 1. Introduction to the Unit: Dynamics
 
