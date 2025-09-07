@@ -79,13 +79,13 @@ Navigate to the different sections to explore the units and their corresponding 
 - [1.1: Gauss's Law](./ap-physics-c-em/unit-1-electrostatics/1-1-gauss-law.html)
 
 **Unit 2: Conductors, Capacitors, Dielectrics**
-- [2.1: Charging a Capacitor](./ap-physics-c-em/unit-2-conductors-capacitors-dielectrics/2-1-charging-a-capacitor.html)
+- [2.1: Charging a Capacitor](/ap-physics-c-em/unit-2-conductors-capacitors-dielectrics/2-1-charging-a-capacitor.html)
 
 **Unit 3: Electric Circuits**
-- [3.1: LR Circuit](./ap-physics-c-em/unit-3-electric-circuits/3-1-lr-circuit.html)
+- [3.1: LR Circuit](/ap-physics-c-em/unit-3-electric-circuits/3-1-lr-circuit.html)
 
 **Unit 4: Magnetic Fields**
-- [4.1: Field from a Current Loop](./ap-physics-c-em/unit-4-magnetic-fields/4-1-field-from-current-loop.html)
+- [4.1: Field from a Current Loop](/ap-physics-c-em/unit-4-magnetic-fields/4-1-field-from-current-loop.html)
 
 **Unit 5: Electromagnetism**
-- [5.1: Maxwell-Ampere Law](./ap-physics-c-em/unit-5-electromagnetism/5-1-maxwell-ampere-law.html)
+- [5.1: Maxwell-Ampere Law](/ap-physics-c-em/unit-5-electromagnetism/5-1-maxwell-ampere-law.html)
