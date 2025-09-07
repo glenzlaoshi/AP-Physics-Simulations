@@ -1,5 +1,22 @@
 glowscript VPython
 
+# --- Click to Start / Pause ---
+# Wait for the first click to start the simulation
+scene.waitfor('click')
+
+# Global variable to control the running state
+running = True
+
+# Function to toggle the running state on click
+def toggle_pause(evt):
+    global running
+    running = not running
+
+# Bind the function to the click event
+scene.bind('click', toggle_pause)
+# --------------------------------
+
+
 # AP Physics 1 - Unit 1: Kinematics
 # Simulation 1.1: 1D Motion
 #
@@ -36,15 +53,15 @@ acc_curve = gcurve(color=color.purple, label="Acceleration (m/s^2)")
 # This loop runs for 4 seconds.
 while t < 4:
     rate(100)
-    
-    # Kinematic equations
-    car.pos = car.pos + car.velocity * dt
-    t = t + dt
-    
-    # Plot data
-    pos_curve.plot(t, car.pos.x)
-    vel_curve.plot(t, car.velocity.x)
-    acc_curve.plot(t, car.acceleration.x)
+    if running:
+        # Kinematic equations
+        car.pos = car.pos + car.velocity * dt
+        t = t + dt
+        
+        # Plot data
+        pos_curve.plot(t, car.pos.x)
+        vel_curve.plot(t, car.velocity.x)
+        acc_curve.plot(t, car.acceleration.x)
 
 print("End of Part 1. Position:", car.pos)
 print("---")

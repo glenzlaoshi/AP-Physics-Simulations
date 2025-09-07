@@ -1,5 +1,22 @@
 glowscript VPython
 
+# --- Click to Start / Pause ---
+# Wait for the first click to start the simulation
+scene.waitfor('click')
+
+# Global variable to control the running state
+sim_running = True
+
+# Function to toggle the running state on click
+def toggle_pause(evt):
+    global sim_running
+    sim_running = not sim_running
+
+# Bind the function to the click event
+scene.bind('click', toggle_pause)
+# --------------------------------
+
+
 # AP Physics C: E&M - Unit 2: Circuits
 # Simulation 2.1: RC Circuit
 #
@@ -50,40 +67,40 @@ current_arrow = arrow(pos=vector(0,-2,0), axis=vector(0,4,0), color=color.yellow
 # ANIMATION LOOP
 while t < 8 * tau: # Run for a long time
     rate(200)
-    
-    # --- Physics Calculation ---
-    # 1. Calculate capacitor voltage
-    Vc = Q / C
-    
-    # 2. Calculate current based on state
-    if charging:
-        # Current is driven by difference between battery and capacitor
-        I = (V_battery - Vc) / R
-        # Charge is increasing
-        Q += I * dt
-    else: # Discharging
-        # Current is driven by capacitor voltage only
-        I = Vc / R
-        # Charge is decreasing
-        Q -= I * dt
-    
-    # Prevent charge from going negative due to numerical error
-    if Q < 0: Q = 0
-    
-    # --- Update Graph ---
-    Vc_curve.plot(t, Vc)
-    I_curve.plot(t, I)
-    
-    # --- Update Visuals ---
-    # Color the capacitor based on its voltage
-    cap_box.color = vector(Vc/V_battery, Vc/V_battery, 0) # Becomes more yellow as Vc increases
-    cap_label.text = f"Vc = {Vc:.2f} V"
-    # Make the arrow size proportional to current
-    current_arrow.shaftwidth = 0.1 + 50*abs(I)
-    if I < 0: current_arrow.color = color.cyan
-    else: current_arrow.color = color.yellow
-    
-    # Update time
-    t += dt
+    if sim_running:
+        # --- Physics Calculation ---
+        # 1. Calculate capacitor voltage
+        Vc = Q / C
+        
+        # 2. Calculate current based on state
+        if charging:
+            # Current is driven by difference between battery and capacitor
+            I = (V_battery - Vc) / R
+            # Charge is increasing
+            Q += I * dt
+        else: # Discharging
+            # Current is driven by capacitor voltage only
+            I = Vc / R
+            # Charge is decreasing
+            Q -= I * dt
+        
+        # Prevent charge from going negative due to numerical error
+        if Q < 0: Q = 0
+        
+        # --- Update Graph ---
+        Vc_curve.plot(t, Vc)
+        I_curve.plot(t, I)
+        
+        # --- Update Visuals ---
+        # Color the capacitor based on its voltage
+        cap_box.color = vector(Vc/V_battery, Vc/V_battery, 0) # Becomes more yellow as Vc increases
+        cap_label.text = f"Vc = {Vc:.2f} V"
+        # Make the arrow size proportional to current
+        current_arrow.shaftwidth = 0.1 + 50*abs(I)
+        if I < 0: current_arrow.color = color.cyan
+        else: current_arrow.color = color.yellow
+        
+        # Update time
+        t += dt
 
 print("Simulation finished.")

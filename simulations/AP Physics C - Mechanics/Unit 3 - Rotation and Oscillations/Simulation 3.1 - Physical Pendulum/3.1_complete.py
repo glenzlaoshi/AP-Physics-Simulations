@@ -1,5 +1,22 @@
 glowscript VPython
 
+# --- Click to Start / Pause ---
+# Wait for the first click to start the simulation
+scene.waitfor('click')
+
+# Global variable to control the running state
+running = True
+
+# Function to toggle the running state on click
+def toggle_pause(evt):
+    global running
+    running = not running
+
+# Bind the function to the click event
+scene.bind('click', toggle_pause)
+# --------------------------------
+
+
 # AP Physics C: Mechanics - Units 5-6
 # Simulation C-M.3: The Physical Pendulum
 #
@@ -63,29 +80,29 @@ sp_curve = gcurve(color=color.white, label="Simple Pendulum")
 # --- ANIMATION LOOP ---
 while t < 10:
     rate(100)
-    
-    # --- Physical Pendulum Physics ---
-    r_vec = cm_marker.pos - pivot_pos
-    torque = cross(r_vec, vector(0, -rod_m * g, 0))
-    alpha_pp = torque.z / I_rod
-    pp['omega'] += alpha_pp * dt
-    d_theta_pp = pp['omega'] * dt
-    pp['theta'] += d_theta_pp
-    rod.rotate(angle=d_theta_pp, axis=vector(0,0,1), origin=pivot_pos)
-    cm_marker.pos = pivot_pos + rod.axis/2
-    
-    # --- Simple Pendulum Physics ---
-    alpha_sp = -(g / rod_L) * sin(sp['theta'])
-    sp['omega'] += alpha_sp * dt
-    d_theta_sp = sp['omega'] * dt
-    sp['theta'] += d_theta_sp
-    simple_rod.rotate(angle=d_theta_sp, axis=vector(0,0,1), origin=pivot_pos)
-    simple_bob.pos = pivot_pos + simple_rod.axis
-    
-    # --- Plotting ---
-    pp_curve.plot(t, pp['theta'])
-    sp_curve.plot(t, sp['theta'])
-    
-    t += dt
+    if running:
+        # --- Physical Pendulum Physics ---
+        r_vec = cm_marker.pos - pivot_pos
+        torque = cross(r_vec, vector(0, -rod_m * g, 0))
+        alpha_pp = torque.z / I_rod
+        pp['omega'] += alpha_pp * dt
+        d_theta_pp = pp['omega'] * dt
+        pp['theta'] += d_theta_pp
+        rod.rotate(angle=d_theta_pp, axis=vector(0,0,1), origin=pivot_pos)
+        cm_marker.pos = pivot_pos + rod.axis/2
+        
+        # --- Simple Pendulum Physics ---
+        alpha_sp = -(g / rod_L) * sin(sp['theta'])
+        sp['omega'] += alpha_sp * dt
+        d_theta_sp = sp['omega'] * dt
+        sp['theta'] += d_theta_sp
+        simple_rod.rotate(angle=d_theta_sp, axis=vector(0,0,1), origin=pivot_pos)
+        simple_bob.pos = pivot_pos + simple_rod.axis
+        
+        # --- Plotting ---
+        pp_curve.plot(t, pp['theta'])
+        sp_curve.plot(t, sp['theta'])
+        
+        t += dt
 
 print("Simulation finished. Note that the physical pendulum is slower because its mass is distributed, giving it a larger moment of inertia.")
