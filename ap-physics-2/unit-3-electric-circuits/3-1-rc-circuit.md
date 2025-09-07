@@ -2,7 +2,7 @@
 title: "3.1 - RC Circuit"
 layout: default
 ---
-# Information: The RC Circuit
+
 
 ## 1. Introduction to the Unit: Electric Circuits
 

@@ -2,7 +2,7 @@
 title: "4.1 - Conservation of Energy"
 layout: default
 ---
-# Information: Conservation of Energy
+
 
 ## 1. Introduction to the Unit: Energy
 

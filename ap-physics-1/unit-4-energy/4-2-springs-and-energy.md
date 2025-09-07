@@ -2,7 +2,7 @@
 title: "4.2 - Springs and Energy"
 layout: default
 ---
-# Information: Springs and Energy
+
 
 ## 1. Introduction to the Unit: Energy (continued)
 

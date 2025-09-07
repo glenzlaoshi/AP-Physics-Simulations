@@ -2,7 +2,7 @@
 title: "2.1 - Center of Mass"
 layout: default
 ---
-# Information: Center of Mass Motion
+
 
 ## 1. Introduction to the Unit: Systems of Particles
 

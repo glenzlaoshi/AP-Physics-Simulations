@@ -2,7 +2,7 @@
 title: "5.1 - 1D Collisions"
 layout: default
 ---
-# Information: 1D Collisions and Momentum
+
 
 ## 1. Introduction to the Unit: Momentum
 

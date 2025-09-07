@@ -2,7 +2,7 @@
 title: "5.1 - Maxwell-Ampere Law"
 layout: default
 ---
-# Information: The Maxwell-Ampere Law
+
 
 ## 1. Introduction to the Unit: Electromagnetism & Maxwell's Equations
 

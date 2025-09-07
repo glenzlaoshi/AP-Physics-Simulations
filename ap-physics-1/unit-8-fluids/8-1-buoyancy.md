@@ -2,7 +2,7 @@
 title: "8.1 - Buoyancy"
 layout: default
 ---
-# Information: Buoyancy
+
 
 ## 1. Introduction to the Unit: Fluids
 

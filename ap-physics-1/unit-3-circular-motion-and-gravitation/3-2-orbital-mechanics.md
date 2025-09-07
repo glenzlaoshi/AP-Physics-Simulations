@@ -2,7 +2,7 @@
 title: "3.2 - Orbital Mechanics"
 layout: default
 ---
-# Information: Orbital Mechanics
+
 
 ## 1. Introduction to the Unit: Gravitation
 

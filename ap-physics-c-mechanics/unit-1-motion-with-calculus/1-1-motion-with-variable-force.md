@@ -2,7 +2,7 @@
 title: "1.1 - Motion with Variable Force"
 layout: default
 ---
-# Information: Motion with Variable Force
+
 
 ## 1. Introduction to the Unit: Calculus in Mechanics
 

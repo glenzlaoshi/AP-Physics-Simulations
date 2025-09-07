@@ -2,7 +2,7 @@
 title: "2.1 - Charging a Capacitor"
 layout: default
 ---
-# Information: The RC Circuit
+
 
 ## 1. Introduction to the Unit: Electric Circuits
 

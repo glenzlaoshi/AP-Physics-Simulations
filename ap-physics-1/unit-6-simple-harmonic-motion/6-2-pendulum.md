@@ -2,7 +2,7 @@
 title: "6.2 - Pendulum"
 layout: default
 ---
-# Information: The Simple Pendulum
+
 
 ## 1. Introduction to the Unit: SHM (continued)
 

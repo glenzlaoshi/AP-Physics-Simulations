@@ -2,7 +2,7 @@
 title: "2.2 - Electric Potential"
 layout: default
 ---
-# Information: Electric Potential
+
 
 ## 1. Introduction to the Unit: Electric Potential
 

@@ -2,7 +2,7 @@
 title: "6.1 - Photoelectric Effect"
 layout: default
 ---
-# Information: The Photoelectric Effect
+
 
 ## 1. Introduction to the Unit: Modern Physics
 

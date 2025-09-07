@@ -2,7 +2,7 @@
 title: "5.1 - Double-Slit Interference"
 layout: default
 ---
-# Information: Double-Slit Interference
+
 
 ## 1. Introduction to the Unit: Physical Optics
 

@@ -2,7 +2,7 @@
 title: "3.1 - Physical Pendulum"
 layout: default
 ---
-# Information: The Physical Pendulum
+
 
 ## 1. Introduction to the Unit: Rotational Motion and Oscillations
 

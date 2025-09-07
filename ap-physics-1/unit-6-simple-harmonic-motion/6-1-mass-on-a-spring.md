@@ -2,7 +2,7 @@
 title: "6.1 - Mass on a Spring"
 layout: default
 ---
-# Information: Simple Harmonic Motion of a Mass-Spring System
+
 
 ## 1. Introduction to the Unit: Simple Harmonic Motion (SHM)
 

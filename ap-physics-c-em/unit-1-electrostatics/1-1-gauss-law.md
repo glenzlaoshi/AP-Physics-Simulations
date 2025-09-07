@@ -2,7 +2,7 @@
 title: "1.1 - Gauss's Law"
 layout: default
 ---
-# Information: Gauss's Law
+
 
 ## 1. Introduction to the Unit: Electrostatics & Gauss's Law
 

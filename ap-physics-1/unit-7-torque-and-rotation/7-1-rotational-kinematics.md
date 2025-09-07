@@ -2,7 +2,7 @@
 title: "7.1 - Rotational Kinematics"
 layout: default
 ---
-# Information: Rotational Kinematics
+
 
 ## 1. Introduction to the Unit: Torque and Rotation
 

@@ -2,7 +2,7 @@
 title: "1.1 - Ideal Gas Law"
 layout: default
 ---
-# Information: The Ideal Gas Law
+
 
 ## 1. Introduction to the Unit: Thermodynamics
 

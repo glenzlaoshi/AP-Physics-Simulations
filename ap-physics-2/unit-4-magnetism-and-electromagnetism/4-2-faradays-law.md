@@ -2,7 +2,7 @@
 title: "4.2 - Faraday's Law"
 layout: default
 ---
-# Information: Faraday's Law of Induction
+
 
 ## 1. Introduction to the Unit: Electromagnetism
 

@@ -2,7 +2,7 @@
 title: "2.1 - Electric Fields"
 layout: default
 ---
-# Information: Electric Fields
+
 
 ## 1. Introduction to the Unit: Electrostatics
 

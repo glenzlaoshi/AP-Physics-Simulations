@@ -2,7 +2,7 @@
 title: "4.1 - Field from a Current Loop"
 layout: default
 ---
-# Information: Magnetic Field from a Current Loop
+
 
 ## 1. Introduction to the Unit: Sources of Magnetic Fields
 

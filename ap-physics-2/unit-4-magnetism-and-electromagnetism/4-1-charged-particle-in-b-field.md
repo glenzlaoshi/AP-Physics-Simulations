@@ -2,7 +2,7 @@
 title: "4.1 - Charged Particle in a B-Field"
 layout: default
 ---
-# Information: Charged Particle in a Magnetic Field
+
 
 ## 1. Introduction to the Unit: Magnetism
 

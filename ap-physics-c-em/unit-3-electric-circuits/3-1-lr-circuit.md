@@ -2,7 +2,7 @@
 title: "3.1 - LR Circuit"
 layout: default
 ---
-# Information: The LR Circuit
+
 
 ## 1. Introduction to the Unit: Circuits with Inductors
 
