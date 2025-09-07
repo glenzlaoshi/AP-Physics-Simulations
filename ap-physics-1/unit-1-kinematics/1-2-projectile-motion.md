@@ -97,4 +97,4 @@ This is the final, working simulation. You can run it here to see the expected o
 
 Use the editor below to complete the `skeleton.py` file. You can edit the code and run it directly in your browser to test your work.
 
-<iframe src="https://trinket.io/glowscript/acacd2fd38d4" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/glowscript/acacd2fd38d4" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
