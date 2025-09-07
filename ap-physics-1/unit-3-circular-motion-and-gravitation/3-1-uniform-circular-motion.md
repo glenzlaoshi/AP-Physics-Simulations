@@ -2,7 +2,6 @@
 title: "3.1 - Uniform Circular Motion"
 layout: default
 ---
-# Information: Uniform Circular Motion
 
 ## 1. Introduction to the Unit: Circular Motion
 
