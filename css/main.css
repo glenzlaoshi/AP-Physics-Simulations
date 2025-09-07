@@ -1,32 +1,38 @@
-body { font-family: sans-serif; line-height: 1.6; margin: 0; background-color: #f4f4f4; }
-header, footer { background-color: #333; color: #fff; padding: 1rem; text-align: center; }
-nav a { color: #fff; margin: 0 15px; text-decoration: none; }
-main { max-width: 800px; margin: 2rem auto; padding: 1rem; background-color: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-h1, h2, h3 { color: #333; }
-code { background-color: #eee; padding: 2px 4px; border-radius: 3px; }
-pre { background-color: #eee; padding: 1rem; border-radius: 5px; overflow-x: auto; }
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
-/* New Header Styling */
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
 .site-header {
-    background-color: #2c3e50; /* Dark blue/grey */
-    color: #ecf0f1; /* Light grey/white */
+    background-color: #2c3e50;
+    color: #ecf0f1;
     padding: 2rem 1rem;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
+
 .header-content {
     max-width: 960px;
     margin: 0 auto;
 }
+
 .site-title {
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 1px;
 }
+
 .site-nav {
     margin-top: 1rem;
 }
+
 .site-nav a {
     color: #ecf0f1;
     text-decoration: none;
@@ -36,7 +42,66 @@ pre { background-color: #eee; padding: 1rem; border-radius: 5px; overflow-x: aut
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .site-nav a:hover {
     background-color: #ecf0f1;
     color: #2c3e50;
+}
+
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+ul li a {
+    font-weight: bold;
+}
+
+code {
+    background-color: #eee;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+pre {
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9em;
+    color: #666;
 }
