@@ -2,7 +2,6 @@
 title: "2.2 - Atwood Machine"
 layout: default
 ---
-# Information: Atwood Machine
 
 ## 1. Introduction to the Unit: Dynamics of Systems
 
