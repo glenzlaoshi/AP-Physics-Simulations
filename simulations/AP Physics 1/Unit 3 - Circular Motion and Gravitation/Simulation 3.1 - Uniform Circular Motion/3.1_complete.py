@@ -1,5 +1,4 @@
-glowscript VPython
-
+Web VPython 3.2
 # AP Physics 1 - Unit 3: Circular Motion and Gravitation
 # Simulation 3.1: Uniform Circular Motion
 #
@@ -43,29 +42,44 @@ a_scale = 1.0
 v_arrow = arrow(pos=ball.pos, shaftwidth=0.2, color=color.green, label="Velocity")
 a_arrow = arrow(pos=ball.pos, shaftwidth=0.2, color=color.red, label="Acceleration")
 
+# --- Click to Start / Pause ---
+# Wait for the first click to start the simulation
+scene.pause('Click to Start')
+# Global variable to control the running state
+running = True
+
+# Function to running on click
+def toggle_pause(evt):
+    global running
+    running = not running
+# Bind the function to the click event
+scene.bind('click', toggle_pause)
+# --------------------------------
+
 # ANIMATION LOOP
 while t < 10:
-    rate(100)
+    rate(1/dt)
+    if running:
     
-    # The acceleration vector always points from the ball to the center (the origin).
-    # Its direction is given by -norm(ball.pos).
-    ball.acceleration = -norm(ball.pos) * a_mag
+        # The acceleration vector always points from the ball to the center (the origin).
+        # Its direction is given by -norm(ball.pos).
+        ball.acceleration = -norm(ball.pos) * a_mag
     
-    # Update velocity and position using basic kinematics
-    ball.velocity = ball.velocity + ball.acceleration * dt
-    ball.pos = ball.pos + ball.velocity * dt
+        # Update velocity and position using basic kinematics
+        ball.velocity = ball.velocity + ball.acceleration * dt
+        ball.pos = ball.pos + ball.velocity * dt
     
-    # Update the string to follow the ball
-    string.axis = ball.pos - post.pos
+        # Update the string to follow the ball
+        string.axis = ball.pos - post.pos
     
-    # Update the visualization arrows
-    v_arrow.pos = ball.pos
-    a_arrow.pos = ball.pos
+        # Update the visualization arrows
+        v_arrow.pos = ball.pos
+        a_arrow.pos = ball.pos
     
-    v_arrow.axis = ball.velocity * v_scale
-    a_arrow.axis = ball.acceleration * a_scale
+        v_arrow.axis = ball.velocity * v_scale
+        a_arrow.axis = ball.acceleration * a_scale
     
-    # Update time
-    t = t + dt
+        # Update time
+        t = t + dt
 
 print("Simulation finished.")
