@@ -1,5 +1,4 @@
-glowscript VPython
-
+Web VPython 3.2
 # AP Physics 1 - Unit 3: Circular Motion and Gravitation
 # Simulation 3.2: Orbital Mechanics
 #
@@ -7,6 +6,20 @@ glowscript VPython
 
 # This program demonstrates how different initial velocities lead to different orbits.
 # It resets and runs the simulation four times.
+
+# --- Click to Start / Pause ---
+# Wait for the first click to start the simulation
+scene.pause('Click to Start')
+# Global variable to control the running state
+running = True
+
+# Function to running on click
+def toggle_pause(evt):
+    global running
+    running = not running
+# Bind the function to the click event
+scene.bind('click', toggle_pause)
+# --------------------------------
 
 def run_orbit_simulation(initial_v_factor, label_text):
     """
@@ -42,19 +55,19 @@ def run_orbit_simulation(initial_v_factor, label_text):
     period = 2 * pi * radius / v_circular
     while t < period * 1.5 and mag(satellite.pos) > planet.radius and mag(satellite.pos) < 2.5 * radius:
         rate(500)
+        if running:
+            # Calculate Gravitational Force
+            r_vector = planet.pos - satellite.pos
+            r_mag = mag(r_vector)
+            r_hat = norm(r_vector)
+            F_mag = G * planet.m * satellite.m / r_mag**2
+            F_gravity = F_mag * r_hat
         
-        # Calculate Gravitational Force
-        r_vector = planet.pos - satellite.pos
-        r_mag = mag(r_vector)
-        r_hat = norm(r_vector)
-        F_mag = G * planet.m * satellite.m / r_mag**2
-        F_gravity = F_mag * r_hat
-        
-        # Update Motion using Newton's 2nd Law and Kinematics
-        satellite.acceleration = F_gravity / satellite.m
-        satellite.velocity = satellite.velocity + satellite.acceleration * dt
-        satellite.pos = satellite.pos + satellite.velocity * dt
-        t = t + dt
+            # Update Motion using Newton's 2nd Law and Kinematics
+            satellite.acceleration = F_gravity / satellite.m
+            satellite.velocity = satellite.velocity + satellite.acceleration * dt
+            satellite.pos = satellite.pos + satellite.velocity * dt
+            t = t + dt
     
     print("Simulation segment finished.")
     sleep(2) # Pause for 2 seconds before the next run
