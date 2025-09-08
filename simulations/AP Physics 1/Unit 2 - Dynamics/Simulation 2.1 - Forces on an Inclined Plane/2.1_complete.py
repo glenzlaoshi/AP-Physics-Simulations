@@ -1,5 +1,4 @@
-glowscript VPython
-
+Web VPython 3.2
 # AP Physics 1 - Unit 2: Dynamics
 # Simulation 2.1: Forces on an Inclined Plane
 #
@@ -10,25 +9,26 @@ scene.title = "Forces on an Inclined Plane"
 scene.caption = "The simulation shows the force vectors acting on the block."
 
 angle = radians(25) # 25 degree incline
-plane = box(pos=vector(0, -0.5, 0), size=vector(12, 0.2, 4), color=color.blue)
+plane = box(pos=vector(0, -0.65, 0), size=vector(12, 0.2, 4), color=color.blue)
 plane.rotate(angle=angle, axis=vector(0, 0, 1))
 
-block = box(pos=vector(-4, 0.2, 0), size=vector(1, 1, 1), color=color.red)
-block.pos = rotate(block.pos, angle=angle, axis=vector(0,0,1))
+block = box(pos=vector(((plane.size.x*0.5)*cos(angle)), (plane.size.x*0.5*sin(angle)), 0), size=vector(1, 1, 1), color=color.red)
+block.pos = vec((plane.size.x*0.5-.8)*cos(angle),(plane.size.x*0.5-.8)*sin(angle),0)
+block.rotate(angle=angle, axis=vector(0,0,1))
 
 # PARAMETERS & INITIAL CONDITIONS
 t = 0
-dt = 0.01
+dt = 0.001
 g = 9.8
 block.mass = 1.0
-mu_k = 0.15 # Coefficient of kinetic friction
+mu_k = 0.35 # Coefficient of kinetic friction
 
 block.velocity = vector(0, 0, 0)
 
 # FORCE CALCULATIONS
 # We define the axes relative to the incline for convenience.
-parallel_axis = vector(cos(angle), sin(angle), 0) # Points down the incline
-perp_axis = vector(sin(angle), cos(angle), 0)     # Points perpendicular to and away from the incline
+parallel_axis = -vector(cos(angle), sin(angle), 0) # Points down the incline
+perp_axis = vector(sin(-angle), cos(-angle), 0)     # Points perpendicular to and away from the incline
 
 # 1. Gravitational Force (Fg)
 Fg = vector(0, -block.mass * g, 0)
@@ -56,7 +56,7 @@ block.acceleration = F_net / block.mass
 # The `axis` represents the direction and magnitude of the force vector.
 
 # Scale factor to make arrows visible but not too large
-force_scale = 0.5
+force_scale = 0.8
 
 # Arrow for Normal Force
 fn_arrow = arrow(color=color.yellow, shaftwidth=0.1)
@@ -77,19 +77,34 @@ print(f"Angle: {degrees(angle):.1f} degrees")
 print(f"Net Force: {F_net}")
 print(f"Acceleration: {block.acceleration}")
 
+# --- Click to Start / Pause ---
+# Wait for the first click to start the simulation
+scene.pause('Click to Start')
+# Global variable to control the running state
+running = True
+
+# Function to running on click
+def toggle_pause(evt):
+    global running
+    running = not running
+# Bind the function to the click event
+scene.bind('click', toggle_pause)
+# --------------------------------
+
 # ANIMATION LOOP
-while block.pos.x < 6:
-    rate(100)
+while block.pos.x > -5.25:
+    rate(1/dt)
+    if running:
+        # Update motion
+        block.velocity = block.velocity + block.acceleration * dt
+        block.pos = block.pos + block.velocity * dt
+        t = t + dt
     
-    # Update motion
-    block.velocity = block.velocity + block.acceleration * dt
-    block.pos = block.pos + block.velocity * dt
-    t = t + dt
-    
-    # Update the positions of the force arrows so they stick to the block
-    fn_arrow.pos = block.pos
-    fg_arrow.pos = block.pos
-    fk_arrow.pos = block.pos
+        # Update the positions of the force arrows so they stick to the block
+        fn_arrow.pos = block.pos
+        fg_arrow.pos = block.pos
+        fk_arrow.pos = block.pos
 
 print("Simulation finished.")
 print(f"Final velocity: {block.velocity.mag:.2f} m/s")
+
