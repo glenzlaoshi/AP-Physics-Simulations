@@ -27,6 +27,11 @@ body {
     font-weight: 700;
 }
 
+.site-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .container {
     display: flex;
     margin-top: 80px; /* Adjust based on header height */
@@ -70,7 +75,7 @@ body {
     padding: 0.2rem 0;
 }
 
-.content {
+.main-content {
     margin-left: 270px; /* Sidebar width + padding */
     padding: 2rem;
     width: calc(100% - 270px);
