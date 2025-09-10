@@ -89,8 +89,9 @@ This is the final, working simulation. You can run it here to see the expected o
 <script type="text/javascript" src="https://www.glowscript.org/package/glow.3.2.min.js"></script>
 <script type="text/javascript" src="https://www.glowscript.org/package/RSrun.3.2.min.js"></script>
 <script type="text/javascript"><!--//--><![CDATA[//><!--
-!function(){var t={};async function e(){"use strict";canvas;var e,o,i,l,r,a,s,n,c,p,u,d,f,y,h,m,v,w,g,_,j=canvas();function P(t,e=0){return Number(t.toFixed(e))}async function b(t){w=!w}for(e=ρσ_list_decorate(["3.2","glowscript"]),Array.prototype["+"]=function(t){return this.concat(t)},Array.prototype["*"]=function(t){return __array_times_number(this,t)},window.__GSlang="vpython",o=GSprint,i=range,l="__main__",r=pytype,(0,t.pythonize.strings)(),j.title="Simulation of Projectile Motion",j.caption="A yellow ball is launched at an angle. Once at the maximum height, a red ball is thrown straight up with the same vertical speed.\nNotice they hit the ground simultaneously, showing independence of vertical and horizontal motion.",a=ρσ_interpolate_kwargs.call(this,box,[ρσ_desugar_kwargs({pos:vector(0,0,0),size:vector(45,.1,10),color:color.green})]),(s=ρσ_interpolate_kwargs.call(this,sphere,[ρσ_desugar_kwargs({pos:vector(1["-u"]()["*"](20),0,0),radius:.4,color:color.yellow})])).trail=ρσ_interpolate_kwargs.call(this,attach_trail,[s].concat([ρσ_desugar_kwargs({color:color.yellow,radius:.05})])),(n=ρσ_interpolate_kwargs.call(this,sphere,[ρσ_desugar_kwargs({pos:vector(s.pos.x,0,0),radius:.4,color:color.red})])).trail=ρσ_interpolate_kwargs.call(this,attach_trail,[n].concat([ρσ_desugar_kwargs({color:color.red,radius:.05})])),c=0,p=.01,u=9.8,d=20,f=await radians(50),s.pos=vector(1["-u"]()["*"](20),s.radius,0),s.velocity=vector(d["*"](cos(f)),d["*"](sin(f)),0),s.acceleration=vector(0,1["-u"]()["*"](u),0),n.pos=vector(1["-u"]()["*"](20)["-"](1["*"](2)["*"](n.radius)),n.radius,0),n.velocity=vector(0,d["*"](sin(f)),0),n.acceleration=vector(0,1["-u"]()["*"](u),0),o("Launching projectile with speed="["+"](ρσ_str.format("{}",d))["+"](" m/s at angle=")["+"](ρσ_str.format("{:.1f}",await degrees(f)))["+"](" degrees.")),o("Thrown red ball from ground="["+"](ρσ_str.format("{}",n.pos.y))["+"](" m.")),y=ρσ_interpolate_kwargs.call(this,graph,[ρσ_desugar_kwargs({title:"Projectile Motion",xtitle:"Time (s)",ytitle:"Value"})]),h=ρσ_interpolate_kwargs.call(this,gcurve,[ρσ_desugar_kwargs({color:color.yellow,label:"Projectile Y-Position (m)"})]),m=ρσ_interpolate_kwargs.call(this,gcurve,[ρσ_desugar_kwargs({color:color.red,label:"Projectile Y-Velocity (m/s)"})]),v=ρσ_interpolate_kwargs.call(this,gcurve,[ρσ_desugar_kwargs({color:color.blue,label:"Projectile X-Position (m)"})]),await j.pause("Click to Start"),w=!0,b.__argnames__||Object.defineProperties(b,{__argnames__:{value:["evt"]},__module__:{value:null}}),j.bind("click",b);s.pos.y["-"](1["*"](s.radius))[">="](0)||n.pos.y["-"](1["*"](n.radius))[">="](0);)await rate(100),w&&(s.pos.y[">="](0)&&(s.velocity=s.velocity["+"](s.acceleration["*"](p)),s.pos=s.pos["+"](s.velocity["*"](p)),h.plot(c,s.pos.y),m.plot(c,s.velocity.y),v.plot(c,s.pos.x)),n.pos.y[">="](0)&&(n.velocity=n.velocity["+"](n.acceleration["*"](p)),n.pos=n.pos["+"](n.velocity["*"](p))),c=c["+"](p));o("Simulation finished."),o("Projectile landed at x = "["+"](ρσ_str.format("{:.2f}",s.pos.x))["+"](" m after ")["+"](ρσ_str.format("{:.2f}",c))["+"](" s")),g=d["*"](sin(f))["+"](sqrt(Math.pow(d["*"](sin(f)),2)["+"](2["*"](u)["*"](s.pos.y))))["/"](u),_=d["*"](cos(f))["*"](g),o("Theoretical time: "["+"](ρσ_str.format("{:.2f}",g))["+"](" s"))}t.pythonize={},function(){function e(){if(e=set("capitalize strip lstrip rstrip islower isupper isspace lower upper swapcase center count endswith startswith find rfind index rindex format join ljust rjust partition rpartition replace split rsplit splitlines zfill".split(" ")),arguments.length)o=arguments[0]?Array.prototype.slice.call(arguments):null;else{var t;o=((t=ρσ_set()).jsset.add("split"),t.jsset.add("replace"),t)}o&&(e=e.difference(set(o)));var e,o,i,l=e;for(var r of l="function"==typeof l[Symbol.iterator]?l instanceof Map?l.keys():l:Object.keys(l))i=r,(ρσ_expr_temp=String.prototype)["number"==typeof i&&i<0?ρσ_expr_temp.length+i:i]=(ρσ_expr_temp=ρσ_str.prototype)["number"==typeof i&&i<0?ρσ_expr_temp.length+i:i]}e.__module__||Object.defineProperties(e,{__module__:{value:"pythonize"}}),t.pythonize.strings=e}(),e.__module__||Object.defineProperties(e,{__module__:{value:null}}),$(function(){window.__context={glowscript_container:$("#glowscript").removeAttr("id")},e()})}();
-//--><!]]></script>
+!function(){var t={};async function e(){"use strict";canvas;var e,o,i,l,r,a,s,n,c,p,u,d,f,y,h,m,v,w,g,_,j=canvas();function P(t,e=0){return Number(t.toFixed(e))}async function b(t){w=!w}for(e=ρσ_list_decorate(["3.2","glowscript"]),Array.prototype["+"]=function(t){return this.concat(t)},Array.prototype["*"]=function(t){return __array_times_number(this,t)},window.__GSlang="vpython",o=GSprint,i=range,l="__main__",r=pytype,(0,t.pythonize.strings)(),j.title="Simulation of Projectile Motion",j.caption="A yellow ball is launched at an angle. Once at the maximum height, a red ball is thrown straight up with the same vertical speed.\nNotice they hit the ground simultaneously, showing independence of vertical and horizontal motion.",a=ρσ_interpolate_kwargs.call(this,box,[ρσ_desugar_kwargs({pos:vector(0,0,0),size:vector(45,.1,10),color:color.green})]),(s=ρσ_interpolate_kwargs.call(this,sphere,[ρσ_desugar_kwargs({pos:vector(1["-u"]()["*"(20)],0,0),radius:.4,color:color.yellow})])).trail=ρσ_interpolate_kwargs.call(this,attach_trail,[s].concat([ρσ_desugar_kwargs({color:color.yellow,radius:.05})])),(n=ρσ_interpolate_kwargs.call(this,sphere,[ρσ_desugar_kwargs({pos:vector(s.pos.x,0,0),radius:.4,color:color.red})])).trail=ρσ_interpolate_kwargs.call(this,attach_trail,[n].concat([ρσ_desugar_kwargs({color:color.red,radius:.05})])),c=0,p=.01,u=9.8,d=20,f=await radians(50),s.pos=vector(1["-u"]()["*"(20)],s.radius,0),s.velocity=vector(d["*"(cos(f)),d["*"(sin(f)),0),s.acceleration=vector(0,1["-u"]()["*"(u),0),n.pos=vector(1["-u"]()["*"(20)["-"](1["*"(2)["*"(n.radius)),n.radius,0),n.velocity=vector(0,d["*"(sin(f)),0),n.acceleration=vector(0,1["-u"]()["*"(u),0),o("Launching projectile with speed="["+"](ρσ_str.format("{}",d))["+"](" m/s at angle=")["+"](ρσ_str.format("{:.1f}",await degrees(f)))["+"](" degrees.")),o("Thrown red ball from ground="["+"](ρσ_str.format("{}",n.pos.y))["+"](" m.")),y=ρσ_interpolate_kwargs.call(this,graph,[ρσ_desugar_kwargs({title:"Projectile Motion",xtitle:"Time (s)",ytitle:"Position (m)"})]),h=ρσ_interpolate_kwargs.call(this,gcurve,[ρσ_desugar_kwargs({color:color.blue,label:"y_pos"})]),m=ρσ_interpolate_kwargs.call(this,gcurve,[ρσ_desugar_kwargs({color:color.red,label:"x_pos"})]),v=ρσ_interpolate_kwargs.call(this,graph,[ρσ_desugar_kwargs({title:"Projectile Motion",xtitle:"Time (s)",ytitle:"Velocity (m/s)"})]),g=ρσ_interpolate_kwargs.call(this,gcurve,[ρσ_desugar_kwargs({color:color.blue,label:"y_vel"})]),_=ρσ_interpolate_kwargs.call(this,gcurve,[ρσ_desugar_kwargs({color:color.red,label:"x_vel"})]),await j.pause("Click to Start"),w=!0,b.__argnames__||Object.defineProperties(b,{__argnames__:{value:["evt"]},__module__:{value:null}}),j.bind("click",b);s.pos.y[">="](0);)await rate(100),w&&(s.velocity=s.velocity["+"](s.acceleration["*"(p)),s.pos=s.pos["+"](s.velocity["*"(p)),c=c["+"](p),h.plot(c,s.pos.y),m.plot(c,s.pos.x),g.plot(c,s.velocity.y),_.plot(c,s.velocity.x));for(o("Projectile landed at t="["+"](ρσ_str.format("{:.2f}",c))["+"](" s, position=")["+"](ρσ_str.format("{}",s.pos)));n.pos.y[">="](0);)await rate(100),w&&(n.velocity=n.velocity["+"](n.acceleration["*"(p)),n.pos=n.pos["+"](n.velocity["*"(p)));o("Red ball landed at position=",n.pos)}e()["catch"](function(e){t.browser_send_error(e)})}();
+//--><!]]>
+</script>
 </div>
 
 ## 5. Student Workspace
@@ -98,3 +99,111 @@ This is the final, working simulation. You can run it here to see the expected o
 Use the editor below to complete the `skeleton.py` file. You can edit the code and run it directly in your browser to test your work.
 
 <iframe src="https://trinket.io/embed/glowscript/acacd2fd38d4" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+---
+
+## 6. Check Your Understanding
+
+Test your knowledge with these multiple-choice questions.
+
+### Conceptual Questions
+
+1.  A cannonball is fired from a cannon at an angle of 45 degrees above the horizontal. If we ignore air resistance, what is the acceleration of the cannonball during its flight?
+    a) Zero.
+    b) A constant horizontal acceleration.
+    c) A constant vertical acceleration, pointing downwards.
+    d) An acceleration that changes depending on the ball's velocity.
+
+2.  A hunter shoots an arrow horizontally from a height of 1.5 m. At the exact same moment, an identical arrow is dropped from the same height. Which arrow hits the ground first? (Ignore air resistance.)
+    a) The arrow shot horizontally.
+    b) The arrow that was dropped.
+    c) They both hit the ground at the same time.
+    d) It depends on how fast the arrow was shot.
+
+3.  For a projectile launched at an angle, which of the following quantities is zero at the highest point of its trajectory?
+    a) Horizontal velocity.
+    b) Vertical velocity.
+    c) Horizontal acceleration.
+    d) Both b and c.
+
+4.  At what angle should a projectile be launched to achieve the maximum horizontal range? (Assume no air resistance and a flat launch/landing surface.)
+    a) 30 degrees.
+    b) 45 degrees.
+    c) 60 degrees.
+    d) 90 degrees.
+
+5.  Which of the following statements about the horizontal and vertical components of projectile motion is true?
+    a) The horizontal velocity changes due to gravity.
+    b) The vertical acceleration is always zero.
+    c) The horizontal motion and vertical motion are independent of each other.
+    d) The horizontal and vertical displacements are always equal.
+
+### Problem-Solving Questions
+
+1.  A ball is thrown with an initial velocity of 20 m/s at an angle of 30 degrees above the horizontal. What are the initial horizontal (vx) and vertical (vy) components of its velocity?
+    a) vx = 10 m/s, vy = 17.3 m/s
+    b) vx = 17.3 m/s, vy = 10 m/s
+    c) vx = 20 m/s, vy = 20 m/s
+    d) vx = 0 m/s, vy = 20 m/s
+
+2.  A stone is thrown horizontally with a speed of 10 m/s from the top of a 49 m high cliff. How far from the base of the cliff does the stone land? (Use g = 9.8 m/s²)
+    a) 10 m
+    b) 31.3 m
+    c) 49 m
+    d) 100 m
+
+3.  A projectile is fired with an initial vertical velocity of 30 m/s. How long does it take to reach the highest point of its trajectory? (Use g = 9.8 m/s²)
+    a) 1.5 s
+    b) 3.1 s
+    c) 9.8 s
+    d) 30 s
+
+4.  A football is kicked from the ground at an angle of 60 degrees with an initial speed of 20 m/s. What is the total time the football is in the air? (Use g = 9.8 m/s²)
+    a) 1.8 s
+    b) 2.0 s
+    c) 3.5 s
+    d) 4.1 s
+
+5.  A projectile has an initial horizontal velocity of 15 m/s and an initial vertical velocity of 20 m/s. What is its speed after 2 seconds? (Use g = 9.8 m/s²)
+    a) 15.0 m/s
+    b) 15.2 m/s
+    c) 20.4 m/s
+    d) 35.0 m/s
+
+### Computational Questions
+
+1.  In the VPython simulation, the projectile's acceleration is set as `projectile.acceleration = vector(0, -9.8, 0)`. Why is the x-component of this vector zero?
+    a) Because the projectile is not moving horizontally.
+    b) To make the simulation run faster.
+    c) Because gravity only acts in the vertical direction (ignoring air resistance).
+    d) It is a mistake; the x-component should be 9.8.
+
+2.  The simulation loop continues `while projectile.pos.y >= 0`. What does this condition represent in the context of the physics simulation?
+    a) It runs as long as the projectile's speed is positive.
+    b) It runs as long as the projectile is on or above the ground.
+    c) It runs until the projectile reaches its maximum height.
+    d) It runs for a fixed number of seconds.
+
+3.  If you wanted to simulate projectile motion on the Moon, where the acceleration due to gravity is about 1/6th of Earth's, how would you modify the code?
+    a) Change `projectile.velocity` to be 1/6th of its initial value.
+    b) Change `dt` to `dt / 6`.
+    c) Change `projectile.acceleration` to `vector(0, -9.8 / 6, 0)`.
+    d) Change the `while` loop condition to `while projectile.pos.y >= -6`.
+
+4.  The code `projectile.velocity = projectile.velocity + projectile.acceleration * dt` is used to update the velocity. Why is this an approximation of the true motion?
+    a) Because it incorrectly assumes acceleration is constant.
+    b) Because it calculates the new velocity based on the acceleration over a discrete time step `dt`, not continuously.
+    c) Because VPython vectors are not precise enough for physics.
+    d) Because it doesn't account for the projectile's mass.
+
+5.  To calculate the initial velocity components, the code uses `sin(theta)` and `cos(theta)`. What would happen if you forgot to convert the launch angle `theta` from degrees to radians before using these functions?
+    a) The simulation would run correctly, as Python's math functions handle both.
+    b) The initial velocity components would be calculated incorrectly, leading to a wrong trajectory.
+    c) The program would produce a syntax error.
+    d) The horizontal motion would be correct, but the vertical motion would be wrong.
+
+---
+### Answer Key
+**Conceptual:** 1. (c), 2. (c), 3. (d), 4. (b), 5. (c)
+**Problem-Solving:** 1. (b), 2. (b), 3. (b), 4. (c), 5. (b)
+**Computational:** 1. (c), 2. (b), 3. (c), 4. (b), 5. (b)

@@ -84,3 +84,111 @@ This is the final, working simulation. You can run it here to see the expected o
 Use the editor below to complete the `skeleton.py` file. You can edit the code and run it directly in your browser to test your work.
 
 <iframe src="https://trinket.io/embed/glowscript/8f311f113c43" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+---
+
+## 6. Check Your Understanding
+
+Test your knowledge with these multiple-choice questions.
+
+### Conceptual Questions
+
+1.  A roller coaster car is released from rest at the top of a hill. At which point in its journey (on a frictionless track) will its kinetic energy be at a maximum?
+    a) At the top of the highest hill.
+    b) At the top of any hill.
+    c) At the lowest point of the track.
+    d) Halfway down the first hill.
+
+2.  Two objects, one with mass `m` and one with mass `2m`, are both dropped from the same height `h`. Ignoring air resistance, how do their speeds compare just before they hit the ground?
+    a) The object with mass `2m` has a greater speed.
+    b) The object with mass `m` has a greater speed.
+    c) They have the same speed.
+    d) The ratio of their speeds is 2:1.
+
+3.  Which of the following is a "non-conservative" force that would cause the total mechanical energy of a system to decrease?
+    a) Gravity.
+    b) The normal force.
+    c) Tension in a string.
+    d) Friction.
+
+4.  If the speed of an object is doubled, its kinetic energy is:
+    a) Halved.
+    b) Doubled.
+    c) Quadrupled.
+    d) Unchanged.
+
+5.  A pendulum swings back and forth. At the very bottom of its swing, its energy is:
+    a) Entirely potential.
+    b) Entirely kinetic.
+    c) Half potential, half kinetic.
+    d) Zero.
+
+### Problem-Solving Questions
+
+1.  A 2 kg ball is at the top of a 10 m high hill, at rest. What is its total mechanical energy relative to the ground? (Use g = 9.8 m/s²)
+    a) 20 J
+    b) 98 J
+    c) 196 J
+    d) 0 J
+
+2.  The same 2 kg ball from the previous question rolls down the frictionless hill. What is its speed at the bottom (h=0)?
+    a) 9.9 m/s
+    b) 14 m/s
+    c) 19.8 m/s
+    d) 196 m/s
+
+3.  A 50 kg skateboarder is moving at 5 m/s at the bottom of a ramp. What is the maximum height `h` she can reach on the other side if she just lets herself roll without pushing? (Ignore friction.)
+    a) 1.28 m
+    b) 2.55 m
+    c) 5.1 m
+    d) 12.5 m
+
+4.  A 0.5 kg block is dropped from a height of 20 m. What is its kinetic energy just before it hits the ground?
+    a) 10 J
+    b) 98 J
+    c) 196 J
+    d) 490 J
+
+5.  A roller coaster car with a mass of 500 kg is at a point on the track 15 m above the ground and is traveling at 10 m/s. What is its total mechanical energy? (Use g = 9.8 m/s²)
+    a) 25,000 J
+    b) 73,500 J
+    c) 98,500 J
+    d) 122,500 J
+
+### Computational Questions
+
+1.  In the simulation, `total_energy` is calculated once at the beginning and never changed. This is a direct application of what principle?
+    a) Newton's Second Law.
+    b) The Law of Conservation of Momentum.
+    c) The Law of Conservation of Energy.
+    d) The definition of kinetic energy.
+
+2.  The simulation calculates the cart's speed using `speed = sqrt(2 * current_KE / cart.m)`. This is a rearrangement of which formula?
+    a) `PE = mgh`
+    b) `KE = 0.5 * m * v²`
+    c) `F = ma`
+    d) `v = d/t`
+
+3.  If you were to add friction to the simulation, how would the `total_energy` variable need to be handled?
+    a) It would remain constant.
+    b) It would need to be decreased inside the loop to account for energy lost to heat.
+    c) It would need to be increased inside the loop.
+    d) The concept of total energy would no longer apply.
+
+4.  The simulation calculates `current_KE = total_energy - current_PE`. What would happen if the cart started with some initial velocity at the top of the hill?
+    a) This calculation would still be correct.
+    b) The `total_energy` would initially be zero.
+    c) The initial `total_energy` would need to include both potential and kinetic energy.
+    d) The simulation would crash.
+
+5.  The simulation updates the cart's horizontal position with `cart.pos.x = cart.pos.x + speed * dt`. Why is this a simplification of real roller coaster motion?
+    a) Because real roller coasters do not have speed.
+    b) Because this assumes the velocity is purely horizontal, which is only true at the very bottom of a dip.
+    c) Because `dt` should be `t`.
+    d) Because real roller coasters do not conserve energy.
+
+---
+### Answer Key
+**Conceptual:** 1. (c), 2. (c), 3. (d), 4. (c), 5. (b)
+**Problem-Solving:** 1. (c), 2. (b), 3. (a), 4. (b), 5. (c)
+**Computational:** 1. (c), 2. (b), 3. (b), 4. (c), 5. (b)

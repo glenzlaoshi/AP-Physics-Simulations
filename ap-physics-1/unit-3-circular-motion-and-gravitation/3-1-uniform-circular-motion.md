@@ -75,3 +75,111 @@ This is the final, working simulation. You can run it here to see the expected o
 Use the editor below to complete the `skeleton.py` file. You can edit the code and run it directly in your browser to test your work.
 
 <iframe src="https://trinket.io/embed/glowscript/52405b4d95d5" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+---
+
+## 6. Check Your Understanding
+
+Test your knowledge with these multiple-choice questions.
+
+### Conceptual Questions
+
+1.  An object is in uniform circular motion. Which of the following statements is true?
+    a) Its velocity is constant.
+    b) Its acceleration is constant.
+    c) Its speed is constant.
+    d) The net force on it is zero.
+
+2.  A car is traveling at a constant speed around a circular track. The net force on the car is directed:
+    a) Forward, in the direction of travel.
+    b) Backward, opposite the direction of travel.
+    c) Toward the center of the circle.
+    d) Outward, away from the center of the circle.
+
+3.  The "centripetal force" is:
+    a) A fundamental force of nature, like gravity.
+    b) The force that is always directed tangent to the path of motion.
+    c) The net force that is required to keep an object moving in a circle.
+    d) A fictitious force that pushes an object outwards.
+
+4.  A ball is being swung in a horizontal circle on the end of a string. If the string breaks, what path will the ball follow?
+    a) It will continue to move in a circle.
+    b) It will fly directly outward, away from the center.
+    c) It will fly off in a straight line tangent to the circle at the point of release.
+    d) It will drop straight to the ground.
+
+5.  If an object in uniform circular motion has its speed doubled, while the radius of its path remains the same, what happens to the required centripetal force?
+    a) It is cut in half.
+    b) It remains the same.
+    c) It is doubled.
+    d) It is quadrupled.
+
+### Problem-Solving Questions
+
+1.  A 2 kg ball is swung in a circle of radius 1.5 m with a constant speed of 6 m/s. What is the magnitude of the centripetal acceleration?
+    a) 4 m/s²
+    b) 8 m/s²
+    c) 12 m/s²
+    d) 24 m/s²
+
+2.  Using the information from the previous question (2 kg ball, 1.5 m radius, 6 m/s speed), what is the magnitude of the centripetal force (the tension in the string)?
+    a) 12 N
+    b) 24 N
+    c) 36 N
+    d) 48 N
+
+3.  A 1200 kg car travels around a circular track of radius 50 m. If the force of friction providing the centripetal force is 9600 N, what is the car's speed?
+    a) 8 m/s
+    b) 20 m/s
+    c) 50 m/s
+    d) 400 m/s
+
+4.  An object completes 10 full circles in 5 seconds, moving on a path with a radius of 2 m. What is its speed?
+    a) 4π m/s
+    b) 8π m/s
+    c) 10π m/s
+    d) 20 m/s
+
+5.  A satellite is in a circular orbit around the Earth. It has a centripetal acceleration of 9.0 m/s². If the radius of its orbit is doubled, what must its new speed be to maintain a circular orbit with the same acceleration?
+    a) It must be halved.
+    b) It must be multiplied by √2.
+    c) It must be doubled.
+    d) It must be quadrupled.
+
+### Computational Questions
+
+1.  In the simulation, why must the acceleration be recalculated inside the `while` loop?
+    a) Because the speed of the ball is changing.
+    b) Because the radius of the circle is changing.
+    c) Because the direction of the required acceleration is constantly changing.
+    d) To make the simulation less efficient.
+
+2.  The code uses `a_dir = norm(-ball.pos)` to find the direction of the acceleration. Why is the negative sign necessary?
+    a) `ball.pos` is a vector from the center to the ball, but the acceleration must point from the ball to the center.
+    b) To make the ball slow down.
+    c) It is a convention in VPython for all circular motion.
+    d) The negative sign cancels out with the negative mass.
+
+3.  What would happen if you set the initial velocity to point directly at the center, for example `ball.velocity = vector(-4, 0, 0)`?
+    a) The ball would move in a perfect circle.
+    b) The ball would move back and forth in a straight line along the x-axis.
+    c) The ball would remain stationary.
+    d) The simulation would crash.
+
+4.  The magnitude of acceleration is calculated as `a_mag = speed**2 / radius`. If you wanted to simulate the ball moving in a larger circle but with the same period (time per revolution), how would you need to change the initial speed?
+    a) The speed would need to be decreased.
+    b) The speed would need to stay the same.
+    c) The speed would need to be increased.
+    d) The period does not depend on speed.
+
+5.  The simulation updates position using `ball.pos = ball.pos + ball.velocity * dt`. If `dt` is made much larger, what is the most likely error you would see in the simulation?
+    a) The ball would move faster and the simulation would be smoother.
+    b) The ball's path would no longer be a perfect circle; it would look more like a polygon.
+    c) The ball would spiral inwards towards the center.
+    d) The simulation would run much slower but remain perfectly accurate.
+
+---
+### Answer Key
+**Conceptual:** 1. (c), 2. (c), 3. (c), 4. (c), 5. (d)
+**Problem-Solving:** 1. (d), 2. (d), 3. (b), 4. (a), 5. (b)
+**Computational:** 1. (c), 2. (a), 3. (b), 4. (c), 5. (b)

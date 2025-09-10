@@ -85,3 +85,111 @@ This is the final, working simulation. You can run it here to see the expected o
 Use the editor below to complete the `skeleton.py` file. You can edit the code and run it directly in your browser to test your work.
 
 <iframe src="https://trinket.io/embed/glowscript/05c9ca4635e8" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+---
+
+## 6. Check Your Understanding
+
+Test your knowledge with these multiple-choice questions.
+
+### Conceptual Questions
+
+1.  The current in a charging RC circuit is given by `I(t) = I_0 * e^(-t/τ)`. What does the initial current `I_0` represent?
+    a) The current after one time constant.
+    b) The final, steady-state current.
+    c) The current through the capacitor only.
+    d) The current at the moment the switch is closed (t=0).
+
+2.  For a charging RC circuit, the differential equation derived from Kirchhoff's loop rule is `V_batt - R(dQ/dt) - Q/C = 0`. What does the term `R(dQ/dt)` represent?
+    a) The voltage across the capacitor.
+    b) The voltage across the resistor.
+    c) The total energy stored in the circuit.
+    d) The time constant.
+
+3.  After a capacitor has been charging for a very long time (`t >> τ`), the current in the circuit approaches zero. Why?
+    a) The battery has run out of energy.
+    b) The resistor has dissipated all the energy.
+    c) The voltage across the capacitor becomes equal and opposite to the battery's EMF, opposing further current flow.
+    d) The capacitance increases to infinity.
+
+4.  The time constant `τ = RC` determines the rate of charging. A larger time constant means:
+    a) The capacitor charges more quickly.
+    b) The capacitor charges more slowly.
+    c) The final charge on the capacitor is greater.
+    d) The initial current is greater.
+
+5.  During the discharging of an RC circuit, the rate at which the charge leaves the capacitor (`-dQ/dt`) is:
+    a) Constant.
+    b) Directly proportional to the resistance `R`.
+    c) Directly proportional to the charge `Q` remaining on the capacitor.
+    d) Inversely proportional to the time constant `τ`.
+
+### Problem-Solving Questions
+
+1.  The charge on a charging capacitor is given by `Q(t) = C*V_batt*(1 - e^(-t/RC))`. What is the expression for the current `I(t)`?
+    a) `I(t) = C*V_batt * e^(-t/RC)`
+    b) `I(t) = (V_batt/R) * e^(-t/RC)`
+    c) `I(t) = V_batt / R`
+    d) `I(t) = - (V_batt / R) * t * e^(-t/RC)`
+
+2.  An RC circuit has R = 1000 Ω and C = 400 μF. If the circuit is charged with a 12 V battery, what is the current at `t = 0.4` seconds? (Note: `τ = 0.4 s`)
+    a) 12 mA
+    b) 7.6 mA
+    c) 4.4 mA
+    d) 0 A
+
+3.  A 50 μF capacitor is discharged through a 200 Ω resistor. The charge on the capacitor as a function of time is `Q(t) = Q_0 * e^(-t/0.01)`. What is the current in the circuit at t = 0.02 s?
+    a) `I = -Q_0 * (100) * e^(-2)`
+    b) `I = -Q_0 * (0.01) * e^(-2)`
+    c) `I = Q_0 * e^(-2)`
+    d) `I = -Q_0 * e^(-2)`
+
+4.  At what time, in terms of the time constant `τ`, will the charge on a charging capacitor reach 90% of its maximum value?
+    a) `t = -τ * ln(0.9)`
+    b) `t = τ * ln(0.1)`
+    c) `t = -τ * ln(0.1)`
+    d) `t = τ`
+
+5.  The energy stored in a capacitor is `U = Q²/ (2C)`. What is the rate at which energy is being stored in a charging capacitor (`dU/dt`) as a function of current `I` and charge `Q`?
+    a) `I*Q / C`
+    b) `I²R`
+    c) `I*Q / (2C)`
+    d) `Q/C`
+
+### Computational Questions
+
+1.  The simulation calculates the current at each time step using `I = (V_batt - Vc) / R`. This algebraic expression is a direct representation of:
+    a) The solution to the RC circuit differential equation.
+    b) The RC circuit differential equation itself, rearranged.
+    c) The definition of capacitance.
+    d) The formula for the time constant.
+
+2.  The simulation updates the charge using `Q = Q + I * dt`. This is a numerical approximation of which calculus relationship?
+    a) `I = dQ/dt`
+    b) `V = IR`
+    c) `Q = CV`
+    d) `τ = RC`
+
+3.  In the discharging phase, the current is calculated as `I = Vc / R`. If you were to write the full differential equation for this phase, it would be:
+    a) `R(dQ/dt) + Q/C = V_batt`
+    b) `R(dQ/dt) + Q/C = 0`
+    c) `R(dQ/dt) - Q/C = 0`
+    d) `dQ/dt = -Q`
+
+4.  If you decrease the time step `dt` in the simulation, how will this affect the accuracy of the numerical solution?
+    a) The accuracy will decrease.
+    b) The accuracy will not change.
+    c) The accuracy will increase, providing a result closer to the true exponential curve.
+    d) The simulation will run faster but be less accurate.
+
+5.  The simulation plots the voltage across the capacitor, `Vc`. According to the charging equation `Vc(t) = V_batt*(1 - e^(-t/τ))`, the initial slope of this graph at t=0 should be:
+    a) Zero.
+    b) `V_batt / τ`
+    c) `V_batt`
+    d) Infinite.
+
+---
+### Answer Key
+**Conceptual:** 1. (d), 2. (b), 3. (c), 4. (b), 5. (c)
+**Problem-Solving:** 1. (b), 2. (c), 3. (a), 4. (c), 5. (a)
+**Computational:** 1. (b), 2. (a), 3. (b), 4. (c), 5. (b)

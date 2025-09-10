@@ -64,3 +64,111 @@ This is the final, working simulation. You can run it here to see the expected o
 Use the editor below to complete the `skeleton.py` file. You can edit the code and run it directly in your browser to test your work.
 
 <iframe src="https://trinket.io/embed/glowscript/e28523e546db" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+---
+
+## 6. Check Your Understanding
+
+Test your knowledge with these multiple-choice questions.
+
+### Conceptual Questions
+
+1.  The pattern of bright and dark fringes in a double-slit experiment is a direct result of which wave phenomenon?
+    a) Reflection.
+    b) Refraction.
+    c) Polarization.
+    d) Interference.
+
+2.  For constructive interference to occur at a point on a screen, the path length difference from the two slits to that point must be:
+    a) An integer multiple of the wavelength.
+    b) A half-integer multiple of the wavelength.
+    c) Equal to the distance between the slits.
+    d) Zero.
+
+3.  In a double-slit experiment, if the distance between the slits (`d`) is decreased, what happens to the spacing between the bright fringes on the screen?
+    a) It decreases.
+    b) It increases.
+    c) It remains the same.
+    d) It depends on the screen distance.
+
+4.  If you perform a double-slit experiment with red light and then repeat it with blue light, how will the pattern change? (Note: Red light has a longer wavelength than blue light).
+    a) The blue light fringes will be more spread out.
+    b) The red light fringes will be more spread out.
+    c) The patterns will be identical.
+    d) No pattern will be formed with blue light.
+
+5.  According to Huygens' Principle, each point on a wavefront acts as a source of:
+    a) New photons.
+    b) Secondary wavelets.
+    c) Electric charge.
+    d) Magnetic field lines.
+
+### Problem-Solving Questions
+
+1.  In a double-slit experiment, the slits are separated by 0.1 mm (1e-4 m). Light with a wavelength of 500 nm (5e-7 m) is used. What is the angle `θ` of the first-order bright fringe (m=1)?
+    a) 0.005 radians
+    b) 0.05 radians
+    c) 0.1 radians
+    d) 0.5 radians
+
+2.  Using the information from the previous question (`d`=0.1 mm, `λ`=500 nm), if the screen is 2.0 m away, what is the distance from the central maximum to the first-order bright fringe? (Use the small angle approximation `sin(θ) ≈ tan(θ) = y/L`).
+    a) 0.005 m
+    b) 0.01 m
+    c) 0.02 m
+    d) 0.05 m
+
+3.  A double-slit experiment produces its third-order bright fringe (m=3) at an angle of 1.5 degrees. If the slit separation is 0.12 mm, what is the wavelength of the light?
+    a) 436 nm
+    b) 549 nm
+    c) 873 nm
+    d) 1047 nm
+
+4.  At a certain point on the screen in a double-slit experiment, the path length difference is 1200 nm. If the wavelength of the light is 600 nm, this point will be:
+    a) A bright fringe (constructive interference).
+    b) A dark fringe (destructive interference).
+    c) Neither bright nor dark.
+    d) The central maximum.
+
+5.  At another point on the screen, the path length difference is 900 nm. If the wavelength of the light is 600 nm, this point will be:
+    a) A bright fringe (constructive interference).
+    b) A dark fringe (destructive interference).
+    c) The central maximum.
+    d) A second-order bright fringe.
+
+### Computational Questions
+
+1.  The simulation calculates the intensity using `I = cos(phase_diff / 2)**2`. This formula shows that the intensity will be at a maximum (equal to 1) when the phase difference is:
+    a) An odd multiple of π (π, 3π, 5π...).
+    b) An even multiple of π (0, 2π, 4π...).
+    c) A multiple of π/2.
+    d) Always equal to 1.
+
+2.  The phase difference is calculated as `phase_diff = (2 * pi / wavelength) * path_diff`. This means a path difference of one full wavelength corresponds to a phase difference of:
+    a) π/2 radians.
+    b) π radians.
+    c) 2π radians.
+    d) 0 radians.
+
+3.  The simulation loops through points on a screen and calculates the intensity at each one. This process of building up a pattern from individual point calculations is a way to model:
+    a) The particle nature of light.
+    b) The wave superposition and interference.
+    c) The photoelectric effect.
+    d) The quantization of energy.
+
+4.  If you were to modify the simulation to use a longer `wavelength`, how would the calculated `phase_diff` for a given `path_diff` change?
+    a) It would increase.
+    b) It would decrease.
+    c) It would remain the same.
+    d) It would become zero.
+
+5.  The simulation calculates `path_diff` as `abs(r1 - r2)`. Why is the absolute value function `abs()` used?
+    a) Because distance cannot be negative.
+    b) To ensure the phase difference is always positive.
+    c) To make the pattern symmetric.
+    d) It is not necessary and could be removed.
+
+---
+### Answer Key
+**Conceptual:** 1. (d), 2. (a), 3. (b), 4. (b), 5. (b)
+**Problem-Solving:** 1. (a), 2. (b), 3. (c), 4. (a), 5. (b)
+**Computational:** 1. (b), 2. (c), 3. (b), 4. (b), 5. (a)

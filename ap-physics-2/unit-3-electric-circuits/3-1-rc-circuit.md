@@ -85,3 +85,111 @@ This is the final, working simulation. You can run it here to see the expected o
 Use the editor below to complete the `skeleton.py` file. You can edit the code and run it directly in your browser to test your work.
 
 <iframe src="https://trinket.io/embed/glowscript/37de0b54f79f" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+---
+
+## 6. Check Your Understanding
+
+Test your knowledge with these multiple-choice questions.
+
+### Conceptual Questions
+
+1.  In a simple RC circuit that is charging, what is the current in the circuit at the exact moment the switch is closed (t=0)?
+    a) Zero.
+    b) At its maximum value, `V_batt / R`.
+    c) Half of its maximum value.
+    d) It depends on the capacitance.
+
+2.  After a charging RC circuit has been connected for a very long time (many time constants), what is the voltage across the capacitor?
+    a) Zero.
+    b) Half the battery voltage.
+    c) Equal to the battery voltage.
+    d) It depends on the resistance.
+
+3.  When a fully charged capacitor is discharged through a resistor, the current in the circuit:
+    a) Is constant until the capacitor is fully discharged.
+    b) Increases over time.
+    c) Decreases exponentially over time.
+    d) Is always zero.
+
+4.  The time constant (`τ = RC`) of an RC circuit represents the time it takes for a charging capacitor's voltage to reach approximately what percentage of the battery voltage?
+    a) 37%
+    b) 50%
+    c) 63%
+    d) 100%
+
+5.  If you increase the resistance in a discharging RC circuit, how does this affect the time it takes for the capacitor to discharge?
+    a) It discharges faster.
+    b) It discharges slower.
+    c) It has no effect on the discharge time.
+    d) It depends on the initial voltage.
+
+### Problem-Solving Questions
+
+1.  What is the time constant of a circuit with a 100 Ω resistor and a 50 μF capacitor?
+    a) 0.002 s
+    b) 0.005 s
+    c) 0.5 s
+    d) 2.0 s
+
+2.  A 10 V battery is connected to a 5 Ω resistor and an uncharged 2 F capacitor. What is the initial current in the circuit when the switch is closed?
+    a) 0.5 A
+    b) 2.0 A
+    c) 10 A
+    d) 50 A
+
+3.  A capacitor is charged to 12 V and then connected to a resistor. After one time constant has passed, what is the approximate voltage across the capacitor?
+    a) 0 V
+    b) 4.4 V
+    c) 6.0 V
+    d) 7.6 V
+
+4.  A 20 μF capacitor is charged to hold 400 μC of charge. What is the voltage across the capacitor?
+    a) 0.05 V
+    b) 8 V
+    c) 20 V
+    d) 8000 V
+
+5.  In a charging RC circuit with a 9V battery, the voltage across the resistor is measured to be 3V at a certain instant. What is the voltage across the capacitor at that same instant?
+    a) 3 V
+    b) 6 V
+    c) 9 V
+    d) 12 V
+
+### Computational Questions
+
+1.  In the simulation of a charging circuit, the current is calculated as `I = (V_batt - Vc) / R`. This is a direct application of:
+    a) Ohm's Law alone.
+    b) The capacitor charge equation `Q=CV`.
+    c) Kirchhoff's Loop Rule.
+    d) The definition of the time constant.
+
+2.  For the discharging phase, the current is calculated as `I = Vc / R`. Why is the `V_batt` term missing from this equation?
+    a) Because the battery has been removed from the circuit for the discharging phase.
+    b) Because the resistor's value has changed.
+    c) It is a mistake in the simulation logic.
+    d) Because the current is flowing in the opposite direction.
+
+3.  The simulation updates the charge on the capacitor during discharging using `Q = Q - I * dt`. Why is the `I*dt` term subtracted?
+    a) To make the simulation run faster.
+    b) Because the current is negative.
+    c) Because charge is flowing *out of* the capacitor, decreasing its total stored charge.
+    d) Because the voltage is decreasing.
+
+4.  If you were to double the capacitance `C` in the simulation, how would this affect the time constant `τ` and the initial charging current `I_initial`?
+    a) `τ` would double, `I_initial` would be halved.
+    b) `τ` would be halved, `I_initial` would double.
+    c) `τ` would double, `I_initial` would be unchanged.
+    d) `τ` would be unchanged, `I_initial` would be halved.
+
+5.  The simulation plots `Vc` (voltage across the capacitor) and `I` (current) versus time. For the charging phase, the `Vc` curve should ________ and the `I` curve should ________.
+    a) increase exponentially, decrease exponentially
+    b) decrease exponentially, increase exponentially
+    c) remain constant, decrease linearly
+    d) increase linearly, remain constant
+
+---
+### Answer Key
+**Conceptual:** 1. (b), 2. (c), 3. (c), 4. (c), 5. (b)
+**Problem-Solving:** 1. (b), 2. (b), 3. (b), 4. (c), 5. (b)
+**Computational:** 1. (c), 2. (a), 3. (c), 4. (c), 5. (a)

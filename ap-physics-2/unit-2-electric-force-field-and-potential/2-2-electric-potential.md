@@ -86,3 +86,113 @@ This is the final, working simulation. You can run it here to see the expected o
 Use the editor below to complete the `skeleton.py` file. You can edit the code and run it directly in your browser to test your work.
 
 <iframe src="https://trinket.io/embed/glowscript/44577f0aac2e" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+---
+
+## 6. Check Your Understanding
+
+Test your knowledge with these multiple-choice questions.
+
+### Conceptual Questions
+
+1.  Electric potential is a ________ quantity, and electric field is a ________ quantity.
+    a) scalar, scalar
+    b) scalar, vector
+    c) vector, scalar
+    d) vector, vector
+
+2.  If you move a positive charge along an equipotential line, the work done by the electric field is:
+    a) Positive.
+    b) Negative.
+    c) Zero.
+    d) It depends on the direction of movement.
+
+3.  How are electric field lines and equipotential lines oriented with respect to each other?
+    a) They are always parallel.
+    b) They are always perpendicular.
+    c) They are in the same direction.
+    d) The angle between them depends on the charge.
+
+4.  A positive charge is released from rest in an electric field. It will move towards a region of:
+    a) Higher electric potential.
+    b) Lower electric potential.
+    c) The same electric potential.
+    d) Zero electric field.
+
+5.  Two point charges, `+q` and `-q`, are placed on the x-axis. At the midpoint between them, which of the following is true?
+    a) The electric field is zero, and the electric potential is zero.
+    b) The electric field is non-zero, and the electric potential is zero.
+    c) The electric field is zero, and the electric potential is non-zero.
+    d) The electric field is non-zero, and the electric potential is non-zero.
+
+### Problem-Solving Questions
+
+(Use k = 9 x 10⁹ N·m²/C²)
+
+1.  What is the electric potential at a distance of 0.2 m from a +5.0 nC point charge?
+    a) 112.5 V
+    b) 225 V
+    c) 450 V
+    d) 900 V
+
+2.  How much work is required to move a +2.0 μC charge from a point with a potential of 50 V to a point with a potential of 150 V?
+    a) 1.0 x 10⁻⁴ J
+    b) 2.0 x 10⁻⁴ J
+    c) 3.0 x 10⁻⁴ J
+    d) 4.0 x 10⁻⁴ J
+
+3.  A +4 nC charge is at the origin. A -2 nC charge is at x = 0.06 m. What is the net electric potential at the point x = 0.03 m on the x-axis?
+    a) 300 V
+    b) 600 V
+    c) 900 V
+    d) 1800 V
+
+4.  An electron (charge = -1.6e-19 C) is accelerated from rest through a potential difference of 1000 V. What is its final kinetic energy?
+    a) 1.6e-22 J
+    b) 1.6e-19 J
+    c) 1.6e-16 J
+    d) 1000 J
+
+5.  Four equal positive charges `+q` are placed at the corners of a square with side length `s`. What is the electric potential at the center of the square?
+    a) Zero.
+    b) `4kq / s`
+    c) `4√2 * kq / s`
+    d) `8kq / s²`
+
+### Computational Questions
+
+1.  The simulation calculates the net potential at a point by algebraically summing the potential from each source charge. This works because electric potential is a:
+    a) Vector.
+    b) Scalar.
+    c) Force.
+    d) Field line.
+
+2.  The simulation creates a contour map where regions of the same color represent:
+    a) Regions of constant electric field.
+    b) Equipotential lines.
+    c) The path a charge would follow.
+    d) Regions of constant force.
+
+3.  The code normalizes the potential using `(V_at_point - V_min) / (V_max - V_min)` to get a value between 0 and 1. What is this value used for?
+    a) To calculate the force.
+    b) To determine the direction of the E-field.
+    c) To map the potential to a color gradient.
+    d) To calculate the kinetic energy.
+
+4.  If you were to modify the simulation to have two positive source charges instead of a dipole, how would the equipotential line exactly at the midpoint between them look?
+    a) It would be a point of very high potential.
+    b) It would be a point of very low (negative) potential.
+    c) It would be a point where V=0.
+    d) It would be a "saddle point" where the potential is a minimum along one axis and a maximum along another.
+
+5.  The simulation calculates potential using `V = k*Q/r`. If you wanted to calculate the electric *field* magnitude instead, you would need to change the formula to:
+    a) `E = k*Q/r²`
+    b) `E = k*Q*r`
+    c) `E = Q/k*r`
+    d) `E = V/r`
+
+---
+### Answer Key
+**Conceptual:** 1. (b), 2. (c), 3. (b), 4. (b), 5. (b)
+**Problem-Solving:** 1. (b), 2. (b), 3. (b), 4. (c), 5. (c)
+**Computational:** 1. (b), 2. (b), 3. (c), 4. (d), 5. (a)

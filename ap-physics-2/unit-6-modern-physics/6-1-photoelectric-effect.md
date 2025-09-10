@@ -83,3 +83,113 @@ This is the final, working simulation. You can run it here to see the expected o
 Use the editor below to complete the `skeleton.py` file. You can edit the code and run it directly in your browser to test your work.
 
 <iframe src="https://trinket.io/embed/glowscript/814c132a1d6f" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+---
+
+## 6. Check Your Understanding
+
+Test your knowledge with these multiple-choice questions.
+
+### Conceptual Questions
+
+1.  The photoelectric effect provides strong evidence for which of the following models of light?
+    a) The wave model.
+    b) The particle model (photons).
+    c) The ray model.
+    d) The ether model.
+
+2.  In a photoelectric effect experiment, if you increase the intensity (brightness) of the light shining on the metal, what will happen?
+    a) The kinetic energy of the ejected electrons will increase.
+    b) The number of electrons ejected per second will increase.
+    c) Both the kinetic energy and the number of electrons will increase.
+    d) No electrons will be ejected.
+
+3.  If the frequency of the light shining on a metal is below the metal's "cutoff frequency," what will happen?
+    a) Electrons will be ejected with very low kinetic energy.
+    b) Electrons will be ejected, but only after a time delay.
+    c) No electrons will be ejected, regardless of the light's intensity.
+    d) The work function of the metal will decrease.
+
+4.  The "work function" of a metal refers to the:
+    a) Total energy of the electrons in the metal.
+    b) Minimum energy required to eject an electron from the metal surface.
+    c) Kinetic energy of the ejected electrons.
+    d) Energy of the photons hitting the metal.
+
+5.  The maximum kinetic energy of an electron ejected in the photoelectric effect depends only on:
+    a) The intensity of the light.
+    b) The frequency of the light and the metal's work function.
+    c) The number of photons hitting the surface per second.
+    d) The temperature of the metal.
+
+### Problem-Solving Questions
+
+(Use h = 6.63e-34 J·s, c = 3.0e8 m/s, 1 eV = 1.6e-19 J)
+
+1.  What is the energy of a single photon of blue light with a wavelength of 450 nm?
+    a) 2.98e-19 J
+    b) 4.42e-19 J
+    c) 6.63e-19 J
+    d) 1.49e-18 J
+
+2.  The work function for a certain metal is 2.3 eV. What is the minimum frequency of light required to eject electrons from this metal?
+    a) 3.5e14 Hz
+    b) 5.5e14 Hz
+    c) 7.5e14 Hz
+    d) 9.5e14 Hz
+
+3.  Light with a frequency of 7.0e14 Hz shines on a metal with a work function of 2.5 eV. What is the maximum kinetic energy of the ejected electrons, in eV?
+    a) 0.4 eV
+    b) 2.5 eV
+    c) 2.9 eV
+    d) 5.4 eV
+
+4.  In a photoelectric effect experiment, the stopping potential (the voltage required to stop the most energetic electrons) is 1.5 V. What is the maximum kinetic energy of the ejected electrons?
+    a) 1.5 J
+    b) 1.5 eV
+    c) 1.6e-19 J
+    d) 9.11e-31 J
+
+5.  A photon with an energy of 5.0 eV strikes a metal surface and ejects an electron with a kinetic energy of 2.0 eV. What is the work function of the metal?
+    a) 2.0 eV
+    b) 2.5 eV
+    c) 3.0 eV
+    d) 7.0 eV
+
+### Computational Questions
+
+1.  In the simulation, the condition to check if an electron is ejected is `if KE_max > 0`. This is equivalent to checking if:
+    a) The light intensity is high enough.
+    b) The photon's energy is greater than the work function.
+    c) The wavelength is long enough.
+    d) The metal is a conductor.
+
+2.  The simulation calculates the electron's speed using a rearrangement of the formula `KE = 0.5*m*v²`. If you double the `KE_max`, the electron's speed `v` will:
+    a) Be multiplied by √2.
+    b) Be doubled.
+    c) Be quadrupled.
+    d) Remain the same.
+
+3.  The simulation creates photons using a `sphere()` object. The color of these photons is set based on the light's wavelength. If you were to change the `wavelength` variable to a smaller value (e.g., from red to blue), what would happen to the energy of each simulated photon?
+    a) It would decrease.
+    b) It would remain the same.
+    c) It would increase.
+    d) It depends on the intensity.
+
+4.  The simulation models the photoelectric effect as a one-to-one interaction between a photon and an electron. How is this represented in the code's logic?
+    a) By creating many electrons for each photon.
+    b) By checking for a collision (`p.pos.x < -5`) and then deciding whether to create a single new electron.
+    c) By calculating the total energy of all photons first.
+    d) By using the `rate()` function to control the flow of electrons.
+
+5.  If you set the `work_function_eV` in the simulation to be very high (e.g., 10 eV), but use visible light (e.g., 550 nm, which is ~2.25 eV), what would you expect to see when the photons hit the metal plate?
+    a) Many electrons would be ejected with high speed.
+    b) A few electrons would be ejected with low speed.
+    c) The photons would bounce off the plate.
+    d) Nothing would happen; no electrons would be ejected.
+
+---
+### Answer Key
+**Conceptual:** 1. (b), 2. (b), 3. (c), 4. (b), 5. (b)
+**Problem-Solving:** 1. (b), 2. (b), 3. (a), 4. (b), 5. (c)
+**Computational:** 1. (b), 2. (a), 3. (c), 4. (b), 5. (d)

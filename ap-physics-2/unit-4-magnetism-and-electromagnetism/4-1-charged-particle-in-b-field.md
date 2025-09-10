@@ -84,3 +84,111 @@ This is the final, working simulation. You can run it here to see the expected o
 Use the editor below to complete the `skeleton.py` file. You can edit the code and run it directly in your browser to test your work.
 
 <iframe src="https://trinket.io/embed/glowscript/8b19e5abb96c" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+---
+
+## 6. Check Your Understanding
+
+Test your knowledge with these multiple-choice questions.
+
+### Conceptual Questions
+
+1.  A stationary proton is in a strong, uniform magnetic field. What is the force on the proton?
+    a) It is directed along the magnetic field lines.
+    b) It is directed perpendicular to the magnetic field lines.
+    c) It is zero.
+    d) It depends on the strength of the field.
+
+2.  The magnetic force on a moving charged particle is always directed:
+    a) In the same direction as the particle's velocity.
+    b) In the same direction as the magnetic field.
+    c) Perpendicular to both the velocity and the magnetic field.
+    d) Opposite to the direction of the particle's velocity.
+
+3.  A charged particle moves through a uniform magnetic field. The effect of the magnetic force is to change the particle's:
+    a) Speed only.
+    b) Direction of motion only.
+    c) Both speed and direction of motion.
+    d) Kinetic energy.
+
+4.  A proton enters a uniform magnetic field that is directed into the page. The proton is moving from left to right. The initial direction of the magnetic force on the proton is:
+    a) Upwards (towards the top of the page).
+    b) Downwards (towards the bottom of the page).
+    c) Into the page.
+    d) Out of the page.
+
+5.  Two particles with the same mass and charge enter a uniform magnetic field with the same velocity. Particle A has charge `+q` and Particle B has charge `-q`. How will their paths differ?
+    a) They will not differ.
+    b) They will curve in opposite directions.
+    c) Particle A will travel in a larger circle.
+    d) Particle B will travel in a larger circle.
+
+### Problem-Solving Questions
+
+1.  A proton (charge `q = 1.6e-19 C`) moves at `2.0e5 m/s` perpendicularly through a magnetic field of `0.5 T`. What is the magnitude of the magnetic force on it?
+    a) 8.0e-15 N
+    b) 1.6e-14 N
+    c) 3.2e-14 N
+    d) 6.4e-14 N
+
+2.  An electron (`m = 9.11e-31 kg`, `q = -1.6e-19 C`) moves at `3.0e6 m/s` in a circular path in a uniform magnetic field of `0.01 T`. What is the radius of its path?
+    a) 0.0017 m
+    b) 0.0034 m
+    c) 0.017 m
+    d) 0.034 m
+
+3.  A charged particle is moving in a circle of radius 2.0 m in a 0.25 T magnetic field. If its momentum (`p = mv`) is `8.0e-20 kg·m/s`, what is the magnitude of its charge?
+    a) 1.6e-19 C
+    b) 3.2e-19 C
+    c) 4.0e-19 C
+    d) 8.0e-19 C
+
+4.  A particle with charge `+q` and mass `m` moves in a circle of radius `R` in a magnetic field `B`. A second particle with charge `+2q` and mass `m` moves at the same speed `v`. What is the radius of the second particle's path?
+    a) R/2
+    b) R
+    c) 2R
+    d) 4R
+
+5.  An alpha particle (charge `+2e`, mass `4u`) and a proton (charge `+e`, mass `1u`) enter a magnetic field with the same velocity. What is the ratio of the radius of the alpha particle's path to the proton's path (`R_alpha / R_proton`)?
+    a) 1/2
+    b) 1
+    c) 2
+    d) 4
+
+### Computational Questions
+
+1.  The simulation calculates the magnetic force using `F_mag = particle.q * cross(particle.velocity, B_field_vec)`. The `cross()` function is necessary because:
+    a) The force is a scalar.
+    b) The force is always parallel to the velocity.
+    c) The force's direction depends on the perpendicular relationship between velocity and B-field.
+    d) The force is only present for positive charges.
+
+2.  The simulation must recalculate the force inside the animation loop because:
+    a) The magnetic field is changing.
+    b) The particle's charge is changing.
+    c) The particle's velocity vector is constantly changing direction.
+    d) The particle's mass is changing.
+
+3.  If you were to set the initial velocity of the particle to be parallel to the magnetic field vector, what would the `cross()` function return, and what would be the resulting force?
+    a) A large vector, resulting in a large force.
+    b) A vector perpendicular to the B-field, resulting in circular motion.
+    c) A zero vector, resulting in zero force.
+    d) The simulation would crash.
+
+4.  The theoretical radius is calculated using `r_theory = (particle.m * v) / (particle.q * B)`. If you double the strength of the magnetic field `B` in the simulation, what would you expect to happen to the radius of the particle's path?
+    a) It would be halved.
+    b) It would remain the same.
+    c) It would be doubled.
+    d) It would be quadrupled.
+
+5.  The simulation updates velocity using `particle.velocity = particle.velocity + particle.acceleration * dt`. Even though the force is always acting, the magnitude of `particle.velocity` (its speed) should remain constant. Why?
+    a) Because the acceleration is always zero.
+    b) Because the magnetic force is always perpendicular to the velocity, it does no work and cannot change the kinetic energy.
+    c) This is a flaw in the simulation; the speed should increase.
+    d) Because the particle is in a vacuum.
+
+---
+### Answer Key
+**Conceptual:** 1. (c), 2. (c), 3. (b), 4. (a), 5. (b)
+**Problem-Solving:** 1. (b), 2. (a), 3. (a), 4. (a), 5. (c)
+**Computational:** 1. (c), 2. (c), 3. (c), 4. (a), 5. (b)

@@ -75,3 +75,113 @@ This is the final, working simulation. You can run it here to see the expected o
 Use the editor below to complete the `skeleton.py` file. You can edit the code and run it directly in your browser to test your work.
 
 <iframe src="https://trinket.io/embed/glowscript/e229822be3e4" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+---
+
+## 6. Check Your Understanding
+
+Test your knowledge with these multiple-choice questions.
+
+### Conceptual Questions
+
+1.  An object will float in a fluid if:
+    a) The object's density is greater than the fluid's density.
+    b) The object's density is less than the fluid's density.
+    c) The object's mass is greater than the fluid's mass.
+    d) The object's volume is less than the fluid's volume.
+
+2.  A large steel ship floats on water. This is possible because:
+    a) Steel is less dense than water.
+    b) The buoyant force depends on the weight of the ship, not its density.
+    c) The ship's shape displaces a large volume of water, making its *average* density less than water.
+    d) The buoyant force is equal to the weight of the ship itself.
+
+3.  According to Archimedes' Principle, the buoyant force on a submerged object is equal to the:
+    a) Weight of the object.
+    b) Volume of the object.
+    c) Weight of the fluid displaced by the object.
+    d) Volume of the fluid displaced by the object.
+
+4.  A block of wood is floating in a bucket of water. If you take this setup to the Moon, where gravity is weaker, what will happen to the block?
+    a) It will float higher (less of it will be submerged).
+    b) It will float lower (more of it will be submerged).
+    c) It will float at the same level.
+    d) It will sink.
+
+5.  Two objects of the exact same size and shape but different masses are submerged in a fluid. How do the buoyant forces on them compare?
+    a) The heavier object experiences a greater buoyant force.
+    b) The lighter object experiences a greater buoyant force.
+    c) They experience the same buoyant force.
+    d) It depends on the depth.
+
+### Problem-Solving Questions
+
+(Use density of water = 1000 kg/m³ and g = 9.8 m/s²)
+
+1.  A block of wood has a volume of 0.5 m³ and a density of 600 kg/m³. What is the mass of the block?
+    a) 300 kg
+    b) 500 kg
+    c) 600 kg
+    d) 1200 kg
+
+2.  A 0.2 m³ object is fully submerged in water. What is the magnitude of the buoyant force acting on it?
+    a) 196 N
+    b) 980 N
+    c) 1960 N
+    d) 2000 N
+
+3.  A 10 kg block of aluminum (density = 2700 kg/m³) is fully submerged in water. What is the buoyant force on the block?
+    a) 36.3 N
+    b) 98 N
+    c) 270 N
+    d) 26460 N
+
+4.  A block of material has a weight of 50 N. When fully submerged in water, its apparent weight is 30 N. What is the buoyant force on the block?
+    a) 20 N
+    b) 30 N
+    c) 50 N
+    d) 80 N
+
+5.  An object with a volume of 0.04 m³ floats in water with 75% of its volume submerged. What is the mass of the object?
+    a) 3 kg
+    b) 4 kg
+    c) 30 kg
+    d) 40 kg
+
+### Computational Questions
+
+1.  The simulation calculates the buoyant force using `Fb_mag = rho_fluid * V_submerged * g`. This is a direct implementation of:
+    a) Newton's Second Law.
+    b) The definition of density.
+    c) Archimedes' Principle.
+    d) Hooke's Law.
+
+2.  In the simulation, why is it necessary to calculate `V_submerged` inside the loop?
+    a) Because the total volume of the block is changing.
+    b) Because the density of the fluid is changing.
+    c) Because the amount of the block that is underwater changes as it moves.
+    d) It is not necessary; it could be calculated once at the beginning.
+
+3.  The buoyant force vector is created as `Fb = vector(0, Fb_mag, 0)`. The direction `vector(0, 1, 0)` signifies that the buoyant force always acts:
+    a) Downwards.
+    b) Upwards.
+    c) In the direction of motion.
+    d) Perpendicular to the motion.
+
+4.  If you set the object's density (`rho_object`) to be greater than the fluid's density (`rho_fluid`) in the simulation, what do you expect to happen?
+    a) The object will float.
+    b) The object will remain suspended wherever it is placed.
+    c) The object will sink.
+    d) The simulation will crash.
+
+5.  The net force is calculated as `F_net = Fg + Fb`. Given that `Fg` is a downward vector and `Fb` is an upward vector, this is a vector addition that finds:
+    a) The sum of the magnitudes of the two forces.
+    b) The difference between the magnitudes of the two forces.
+    c) The product of the two forces.
+    d) The ratio of the two forces.
+
+---
+### Answer Key
+**Conceptual:** 1. (b), 2. (c), 3. (c), 4. (c), 5. (c)
+**Problem-Solving:** 1. (a), 2. (c), 3. (a), 4. (a), 5. (c)
+**Computational:** 1. (c), 2. (c), 3. (b), 4. (c), 5. (b)

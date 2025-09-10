@@ -87,3 +87,113 @@ This is the final, working simulation. You can run it here to see the expected o
 Use the editor below to complete the `skeleton.py` file. You can edit the code and run it directly in your browser to test your work.
 
 <iframe src="https://trinket.io/embed/glowscript/a508cfc93571" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+---
+
+## 6. Check Your Understanding
+
+Test your knowledge with these multiple-choice questions.
+
+### Conceptual Questions
+
+1.  The speed required for a satellite to maintain a stable circular orbit depends on which of the following?
+    a) The mass of the satellite.
+    b) The mass of the planet and the orbital radius.
+    c) The mass of the satellite and the mass of the planet.
+    d) The radius of the orbit only.
+
+2.  If a satellite in a stable circular orbit suddenly slows down, what will happen to its path?
+    a) It will move into a larger circular orbit.
+    b) It will move into an elliptical orbit.
+    c) It will begin to spiral inward towards the planet.
+    d) It will continue in the same circular orbit.
+
+3.  According to Newton's Law of Universal Gravitation, if you double the distance between the centers of two objects, the gravitational force between them will be:
+    a) Four times stronger.
+    b) Two times stronger.
+    c) Half as strong.
+    d) One-quarter as strong.
+
+4.  Planet A has twice the mass of Planet B. A satellite orbits each planet at the same orbital radius. How does the orbital speed of the satellite around Planet A (`vA`) compare to its speed around Planet B (`vB`)?
+    a) `vA = vB`
+    b) `vA = 2 * vB`
+    c) `vA = sqrt(2) * vB`
+    d) `vA = vB / 2`
+
+5.  For a satellite in a stable circular orbit, the force of gravity is:
+    a) Greater than the required centripetal force.
+    b) Less than the required centripetal force.
+    c) Equal to the required centripetal force.
+    d) Tangent to the orbital path.
+
+### Problem-Solving Questions
+
+(Use G = 6.67e-11 N·m²/kg²)
+
+1.  A 1000 kg satellite is in a circular orbit around the Earth (Mass = 5.97e24 kg) at a radius of 7.0e6 m. What is the magnitude of the gravitational force on the satellite?
+    a) 8090 N
+    b) 8.09 N
+    c) 5.68e9 N
+    d) 5680 N
+
+2.  Using the information from the previous question, what is the required orbital speed for this satellite?
+    a) 7540 m/s
+    b) 5680 m/s
+    c) 5.97e3 m/s
+    d) 7.0e6 m/s
+
+3.  A satellite orbits a planet of mass `M` at a radius `r`. If another satellite with twice the mass orbits the same planet at the same radius, what is its orbital period compared to the first satellite?
+    a) It is half the period.
+    b) It is the same.
+    c) It is twice the period.
+    d) It is four times the period.
+
+4.  An asteroid has an orbital speed of 15,000 m/s around a star with a mass of 2.0e30 kg. What is the radius of its circular orbit?
+    a) 5.9e11 m
+    b) 8.9e9 m
+    c) 1.3e26 m
+    d) 4.4e15 m
+
+5.  What is the centripetal acceleration of the International Space Station, which orbits at a radius of approximately 6.8e6 m from Earth's center? (Earth Mass = 5.97e24 kg)
+    a) 9.8 m/s²
+    b) 8.6 m/s²
+    c) 0 m/s²
+    d) 1.6 m/s²
+
+### Computational Questions
+
+1.  In the simulation, the gravitational force must be recalculated inside the loop. Why is this necessary for an accurate simulation, especially for non-circular orbits?
+    a) Because the mass of the planet is changing.
+    b) Because the gravitational constant G changes.
+    c) Because both the distance and the direction of the force vector change as the satellite moves.
+    d) It is not necessary; the force is constant.
+
+2.  The code calculates the vector from the satellite to the planet using `r_vector = planet.pos - satellite.pos`. What would happen if this were reversed to `satellite.pos - planet.pos`?
+    a) The simulation would be unaffected.
+    b) The force would be repulsive instead of attractive, pushing the satellite away.
+    c) The magnitude of the force would be wrong.
+    d) The simulation would run slower.
+
+3.  To achieve a perfect circular orbit, the initial velocity is set to `satellite.velocity = vector(0, v_circular, 0)`. Why is this velocity purely in the y-direction?
+    a) Because the satellite starts on the y-axis.
+    b) Because the satellite starts on the x-axis, and the velocity must be tangential to the circular path.
+    c) To make the satellite move towards the planet.
+    d) It is an arbitrary choice; any direction would work.
+
+4.  If you set the initial speed in the simulation to be *less* than the calculated `v_circular`, what trajectory would you expect to see?
+    a) A larger circular orbit.
+    b) A stable elliptical orbit.
+    c) A spiral path moving inward towards the planet.
+    d) A straight line path away from the planet.
+
+5.  The acceleration is calculated as `satellite.acceleration = F_gravity / satellite.m`. This line of code demonstrates that:
+    a) The satellite's acceleration is independent of its own mass.
+    b) Heavier satellites accelerate faster.
+    c) The acceleration depends only on the planet's mass.
+    d) The acceleration is constant throughout the orbit.
+
+---
+### Answer Key
+**Conceptual:** 1. (b), 2. (c), 3. (d), 4. (c), 5. (c)
+**Problem-Solving:** 1. (a), 2. (a), 3. (b), 4. (a), 5. (b)
+**Computational:** 1. (c), 2. (b), 3. (b), 4. (c), 5. (a)

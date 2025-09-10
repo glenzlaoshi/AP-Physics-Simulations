@@ -76,3 +76,111 @@ This is the final, working simulation. You can run it here to see the expected o
 Use the editor below to complete the `skeleton.py` file. You can edit the code and run it directly in your browser to test your work.
 
 <iframe src="https://trinket.io/embed/glowscript/f851b40dd418" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+---
+
+## 6. Check Your Understanding
+
+Test your knowledge with these multiple-choice questions.
+
+### Conceptual Questions
+
+1.  Gauss's Law relates the electric flux through a closed surface to:
+    a) The net charge outside the surface.
+    b) The net charge enclosed by the surface.
+    c) The surface area of the surface.
+    d) The electric field at a single point on the surface.
+
+2.  A spherical Gaussian surface surrounds a point charge `+q`. If the radius of the Gaussian surface is doubled, the total electric flux through the surface will:
+    a) Be quartered.
+    b) Be halved.
+    c) Remain the same.
+    d) Be doubled.
+
+3.  For which of the following charge distributions would Gauss's Law be most useful for easily calculating the electric field?
+    a) A single point charge.
+    b) An electric dipole.
+    c) An infinitely long, uniformly charged wire.
+    d) A finite, charged rod.
+
+4.  The electric field is zero everywhere inside a hollow, charged conducting sphere. According to Gauss's Law, this implies that for any Gaussian surface placed inside the sphere:
+    a) The net enclosed charge must be zero.
+    b) The electric flux must be zero.
+    c) The surface area must be zero.
+    d) Both a and b are correct.
+
+5.  A Gaussian surface encloses no net charge. Which of the following statements must be true?
+    a) The electric field is zero everywhere on the surface.
+    b) The electric field is uniform everywhere on the surface.
+    c) The net electric flux through the surface is zero.
+    d) The number of charges inside and outside the surface is equal.
+
+### Problem-Solving Questions
+
+1.  A point charge of +5.0 μC is at the center of a cube with sides of length 0.2 m. What is the total electric flux through the surface of the cube? (Use ε₀ = 8.85e-12 C²/N·m²)
+    a) 5.65e5 N·m²/C
+    b) 1.41e5 N·m²/C
+    c) 2.26e6 N·m²/C
+    d) Zero.
+
+2.  An infinitely long line of charge has a uniform linear charge density `λ`. Using a cylindrical Gaussian surface of radius `r` and length `L`, what is the `Q_enclosed`?
+    a) `λL`
+    b) `λ / L`
+    c) `λ * 2πr`
+    d) `λ * 2πrL`
+
+3.  Using Gauss's Law for the infinite line of charge from the previous question, the electric field at a distance `r` is found to be `E = λ / (2πε₀r)`. This field strength is proportional to:
+    a) `r`
+    b) `r²`
+    c) `1/r`
+    d) `1/r²`
+
+4.  A large, flat, non-conducting sheet has a uniform surface charge density `σ`. The electric field created by this sheet is `E = σ / (2ε₀)`. What is the electric flux through a small patch of area `A` on a Gaussian surface that is parallel to the sheet?
+    a) `E * A`
+    b) Zero, because the E-field is parallel to the surface patch.
+    c) `σ * A`
+    d) `σ * A / ε₀`
+
+5.  A solid insulating sphere of radius `R` has a total charge `Q` distributed uniformly throughout its volume. What is the electric field at a distance `r > R` from the center?
+    a) `kQ / R²`
+    b) `kQ / r²`
+    c) `kQr / R³`
+    d) Zero.
+
+### Computational Questions
+
+1.  The simulation calculates the total flux by summing `dFlux` over many small patches. This numerical summation is an approximation of which mathematical operation?
+    a) A line integral (`∫ E ⋅ dl`)
+    b) A surface integral (`∮ E ⋅ dA`)
+    c) A derivative (`dE/dA`)
+    d) A simple multiplication (`E * A`)
+
+2.  The flux through a single patch is calculated as `dFlux = dot(E, dA_vec)`. The dot product is used because:
+    a) It correctly multiplies the magnitudes of the vectors.
+    b) It finds the component of the E-field that is perpendicular to the surface patch area.
+    c) It finds the component of the E-field that is parallel to the surface patch area.
+    d) It is the only way to multiply vectors in VPython.
+
+3.  In the simulation, the area vector `dA_vec` for a patch on the sphere always points radially outward. Why is this the correct direction?
+    a) Because the E-field points radially outward.
+    b) By convention, the area vector for a closed surface points outward.
+    c) Because the charge is positive.
+    d) To make the dot product with the E-field equal to zero.
+
+4.  If you increase the number of patches in the simulation (e.g., increase `n_theta` and `n_phi`), what will happen to the accuracy of the calculated `total_flux`?
+    a) It will become less accurate.
+    b) It will become more accurate, getting closer to the theoretical value.
+    c) The accuracy will not change.
+    d) The simulation will run faster.
+
+5.  The theoretical flux is calculated as `flux_theory = Q_enclosed / epsilon_0`. If you were to add a second charge *outside* the Gaussian surface in the simulation, how would this affect `flux_theory`?
+    a) It would increase.
+    b) It would decrease.
+    c) It would not change.
+    d) It would depend on the sign of the second charge.
+
+---
+### Answer Key
+**Conceptual:** 1. (b), 2. (c), 3. (c), 4. (d), 5. (c)
+**Problem-Solving:** 1. (a), 2. (a), 3. (c), 4. (b), 5. (b)
+**Computational:** 1. (b), 2. (b), 3. (b), 4. (b), 5. (c)

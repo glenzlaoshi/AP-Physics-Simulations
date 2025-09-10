@@ -85,3 +85,111 @@ This is the final, working simulation. You can run it here to see the expected o
 Use the editor below to complete the `skeleton.py` file. You can edit the code and run it directly in your browser to test your work.
 
 <iframe src="https://trinket.io/embed/glowscript/8663d99a8e62" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+---
+
+## 6. Check Your Understanding
+
+Test your knowledge with these multiple-choice questions.
+
+### Conceptual Questions
+
+1.  The rotational equivalent of mass is:
+    a) Torque.
+    b) Angular velocity.
+    c) Moment of inertia.
+    d) Angular acceleration.
+
+2.  Two solid disks have the same mass, but Disk A has twice the radius of Disk B. How does the moment of inertia of Disk A (`IA`) compare to that of Disk B (`IB`)? (For a solid disk, `I = 1/2 * MR²`)
+    a) `IA = IB`
+    b) `IA = 2 * IB`
+    c) `IA = 4 * IB`
+    d) `IA = IB / 2`
+
+3.  A spinning ice skater pulls her arms in. What happens to her angular velocity?
+    a) It increases.
+    b) It decreases.
+    c) It remains the same.
+    d) It depends on the direction she is spinning.
+
+4.  If the net torque on an object is zero, its angular acceleration must be:
+    a) Zero.
+    b) Constant but not necessarily zero.
+    c) Increasing.
+    d) Decreasing.
+
+5.  A wheel is rotating with a constant angular acceleration. Which of the following statements is true?
+    a) Its angular velocity is constant.
+    b) Its angular displacement is constant.
+    c) The net torque on it is constant and non-zero.
+    d) The net torque on it is zero.
+
+### Problem-Solving Questions
+
+1.  A wheel starts from rest and has a constant angular acceleration of 2.0 rad/s². What is its angular velocity after 5.0 seconds?
+    a) 2.0 rad/s
+    b) 5.0 rad/s
+    c) 10.0 rad/s
+    d) 25.0 rad/s
+
+2.  A solid disk with a mass of 4 kg and a radius of 0.5 m is free to rotate. What is its moment of inertia? (`I = 1/2 * MR²`)
+    a) 0.5 kg·m²
+    b) 1.0 kg·m²
+    c) 2.0 kg·m²
+    d) 4.0 kg·m²
+
+3.  A net torque of 10 N·m is applied to the disk from the previous question (`I = 0.5 kg·m²`). What is the resulting angular acceleration?
+    a) 5 rad/s²
+    b) 10 rad/s²
+    c) 20 rad/s²
+    d) 50 rad/s²
+
+4.  A spinning top slows down from an initial angular velocity of 30 rad/s to 10 rad/s in 4 seconds. What is its angular acceleration?
+    a) -2.5 rad/s²
+    b) -5.0 rad/s²
+    c) -7.5 rad/s²
+    d) -10.0 rad/s²
+
+5.  A flywheel accelerates from rest with `α = 3 rad/s²`. How many revolutions has it turned after 4 seconds? (Hint: Find `Δθ` in radians first, then convert. 1 rev = 2π rad).
+    a) 1.9 rev
+    b) 3.8 rev
+    c) 12 rev
+    d) 24 rev
+
+### Computational Questions
+
+1.  The simulation calculates angular acceleration using `alpha = torque / disk.I`. This is a rearrangement of which fundamental physics principle?
+    a) `F = ma`
+    b) `τ = Iα` (Newton's Second Law for Rotation)
+    c) `KE = 1/2 * mv²`
+    d) `p = mv`
+
+2.  In the simulation loop, the angular velocity is updated with `omega = omega + alpha * dt`. This is the rotational analog of which linear kinematics equation?
+    a) `x = x + v*dt`
+    b) `v = v + a*dt`
+    c) `a = F/m`
+    d) `KE = 1/2 * mv²`
+
+3.  The simulation uses `disk.rotate(angle = omega * dt, axis=vector(0,0,1))`. What does the `axis` parameter define?
+    a) The direction of the torque.
+    b) The line about which the disk is spinning.
+    c) The direction of the angular velocity.
+    d) The direction of the angular acceleration.
+
+4.  If you were to double the applied `torque` in the simulation, what would happen to the calculated `alpha`?
+    a) It would be halved.
+    b) It would remain the same.
+    c) It would be doubled.
+    d) It would be quadrupled.
+
+5.  The moment of inertia `disk.I` is calculated before the loop starts. Why is it not necessary to recalculate it inside the loop?
+    a) Because the torque is constant.
+    b) Because the angular acceleration is constant.
+    c) Because the mass and radius of the disk are not changing.
+    d) It is necessary, and this is a flaw in the simulation.
+
+---
+### Answer Key
+**Conceptual:** 1. (c), 2. (c), 3. (a), 4. (a), 5. (c)
+**Problem-Solving:** 1. (c), 2. (a), 3. (c), 4. (b), 5. (b)
+**Computational:** 1. (b), 2. (b), 3. (b), 4. (c), 5. (c)
