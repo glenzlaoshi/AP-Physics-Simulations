@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | AP Physics Simulations</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
 </head>
 <body>
     <header class="site-header">
@@ -13,40 +13,40 @@
     <div class="container">
         <aside class="sidebar">
             <nav class="site-nav">
-                <a href="/AP-Physics-Simulations">Home</a>
+                <a href="{{ "/" | relative_url }}">Home</a>
                 <h3>AP Physics 1</h3>
                 <ul>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-1/unit-1-kinematics/">Unit 1: Kinematics</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-1/unit-2-dynamics/">Unit 2: Dynamics</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-1/unit-3-circular-motion-and-gravitation/">Unit 3: Circular Motion and Gravitation</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-1/unit-4-energy/">Unit 4: Energy</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-1/unit-5-momentum/">Unit 5: Momentum</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-1/unit-6-simple-harmonic-motion/">Unit 6: Simple Harmonic Motion</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-1/unit-7-torque-and-rotation/">Unit 7: Torque and Rotation</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-1/unit-8-fluids/">Unit 8: Fluids</a></li>
+                    <li><a href="{{ "/ap-physics-1/unit-1-kinematics/" | relative_url }}">Unit 1: Kinematics</a></li>
+                    <li><a href="{{ "/ap-physics-1/unit-2-dynamics/" | relative_url }}">Unit 2: Dynamics</a></li>
+                    <li><a href="{{ "/ap-physics-1/unit-3-circular-motion-and-gravitation/" | relative_url }}">Unit 3: Circular Motion and Gravitation</a></li>
+                    <li><a href="{{ "/ap-physics-1/unit-4-energy/" | relative_url }}">Unit 4: Energy</a></li>
+                    <li><a href="{{ "/ap-physics-1/unit-5-momentum/" | relative_url }}">Unit 5: Momentum</a></li>
+                    <li><a href="{{ "/ap-physics-1/unit-6-simple-harmonic-motion/" | relative_url }}">Unit 6: Simple Harmonic Motion</a></li>
+                    <li><a href="{{ "/ap-physics-1/unit-7-torque-and-rotation/" | relative_url }}">Unit 7: Torque and Rotation</a></li>
+                    <li><a href="{{ "/ap-physics-1/unit-8-fluids/" | relative_url }}">Unit 8: Fluids</a></li>
                 </ul>
                 <h3>AP Physics 2</h3>
                 <ul>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-2/unit-1-thermodynamics/">Unit 1: Thermodynamics</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-2/unit-2-electric-force-field-and-potential/">Unit 2: Electric Force, Field, and Potential</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-2/unit-3-electric-circuits/">Unit 3: Electric Circuits</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-2/unit-4-magnetism-and-electromagnetism/">Unit 4: Magnetism & Electromagnetism</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-2/unit-5-geometric-and-physical-optics/">Unit 5: Geometric and Physical Optics</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-2/unit-6-modern-physics/">Unit 6: Modern Physics</a></li>
+                    <li><a href="{{ "/ap-physics-2/unit-1-thermodynamics/" | relative_url }}">Unit 1: Thermodynamics</a></li>
+                    <li><a href="{{ "/ap-physics-2/unit-2-electric-force-field-and-potential/" | relative_url }}">Unit 2: Electric Force, Field, and Potential</a></li>
+                    <li><a href="{{ "/ap-physics-2/unit-3-electric-circuits/" | relative_url }}">Unit 3: Electric Circuits</a></li>
+                    <li><a href="{{ "/ap-physics-2/unit-4-magnetism-and-electromagnetism/" | relative_url }}">Unit 4: Magnetism & Electromagnetism</a></li>
+                    <li><a href="{{ "/ap-physics-2/unit-5-geometric-and-physical-optics/" | relative_url }}">Unit 5: Geometric and Physical Optics</a></li>
+                    <li><a href="{{ "/ap-physics-2/unit-6-modern-physics/" | relative_url }}">Unit 6: Modern Physics</a></li>
                 </ul>
                 <h3>AP Physics C: E&M</h3>
                 <ul>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-c-em/unit-1-electrostatics/">Unit 1: Electrostatics</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-c-em/unit-2-conductors-capacitors-dielectrics/">Unit 2: Conductors, Capacitors, Dielectrics</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-c-em/unit-3-electric-circuits/">Unit 3: Electric Circuits</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-c-em/unit-4-magnetic-fields/">Unit 4: Magnetic Fields</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-c-em/unit-5-electromagnetism/">Unit 5: Electromagnetism</a></li>
+                    <li><a href="{{ "/ap-physics-c-em/unit-1-electrostatics/" | relative_url }}">Unit 1: Electrostatics</a></li>
+                    <li><a href="{{ "/ap-physics-c-em/unit-2-conductors-capacitors-dielectrics/" | relative_url }}">Unit 2: Conductors, Capacitors, Dielectrics</a></li>
+                    <li><a href="{{ "/ap-physics-c-em/unit-3-electric-circuits/" | relative_url }}">Unit 3: Electric Circuits</a></li>
+                    <li><a href="{{ "/ap-physics-c-em/unit-4-magnetic-fields/" | relative_url }}">Unit 4: Magnetic Fields</a></li>
+                    <li><a href="{{ "/ap-physics-c-em/unit-5-electromagnetism/" | relative_url }}">Unit 5: Electromagnetism</a></li>
                 </ul>
                 <h3>AP Physics C: Mechanics</h3>
                 <ul>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-c-mechanics/unit-1-motion-with-calculus/">Unit 1: Motion with Calculus</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-c-mechanics/unit-2-systems-and-momentum/">Unit 2: Systems and Momentum</a></li>
-                    <li><a href="/AP-Physics-Simulations/ap-physics-c-mechanics/unit-3-rotation-and-oscillations/">Unit 3: Rotation and Oscillations</a></li>
+                    <li><a href="{{ "/ap-physics-c-mechanics/unit-1-motion-with-calculus/" | relative_url }}">Unit 1: Motion with Calculus</a></li>
+                    <li><a href="{{ "/ap-physics-c-mechanics/unit-2-systems-and-momentum/" | relative_url }}">Unit 2: Systems and Momentum</a></li>
+                    <li><a href="{{ "/ap-physics-c-mechanics/unit-3-rotation-and-oscillations/" | relative_url }}">Unit 3: Rotation and Oscillations</a></li>
                 </ul>
             </nav>
         </aside>
@@ -60,5 +60,7 @@
     <footer>
         <p></p>
     </footer>
+</body>
+</html>>ooter>
 </body>
 </html>
