@@ -1,5 +1,5 @@
 ---
-title: "6.1 - Mass on a Spring"
+title: "6.1 - Mass-Spring System"
 layout: default
 ---
 
@@ -68,7 +68,18 @@ Once you have a graph, you can measure the period `T`. The period is the time di
 
 This is the final, working simulation. You can run it here to see the expected outcome.
 
-<iframe src="https://glowscript.org/#/user/cglenz/folder/APSimulations/program/6.1-complete.py" width="320" height="340"></iframe>
+<div id="glowscript" class="glowscript">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link type="text/css" href="https://www.glowscript.org/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
+<link type="text/css" href="https://www.glowscript.org/css/ide.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/glow.3.2.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/RSrun.3.2.min.js"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+!function(){var i={};async function o(){"use strict";canvas;var o,t,e,s,l,r,n,a,p,c,u,f,m,h,_,d,y,v,g,k,b,w,x,z,P,T,q,S,j=canvas();async function M(i){k=!k}for(o=ρσ_list_decorate(["3.2","glowscript"]),Array.prototype["+"]=function(i){return this.concat(i)},Array.prototype["*"]=function(i){return __array_times_number(this,i)},window.__GSlang="vpython",t=GSprint,e=range,s="__main__",l=pytype,(0,i.pythonize.strings)(),j.title="Simple Harmonic Motion: Mass-Spring System",r=ρσ_interpolate_kwargs.call(this,box,[ρσ_desugar_kwargs({pos:vector(1["-u"]()["*"](8),0,0),size:vector(.2,4,4),color:color.gray(.7)})]),n=ρσ_interpolate_kwargs.call(this,box,[ρσ_desugar_kwargs({pos:vector(0,1["-u"]()["*"](1.1),0),size:vector(20,.2,4),color:color.gray(.7)})]),a=ρσ_interpolate_kwargs.call(this,box,[ρσ_desugar_kwargs({pos:vector(0,0,0),size:vector(2,2,2),color:color.green})]),p=ρσ_interpolate_kwargs.call(this,helix,[ρσ_desugar_kwargs({pos:r.pos,axis:a.pos["-"](1["*"](r.pos)),radius:.5,coils:20,thickness:.1,color:color.yellow})]),c=0,u=.01,a.m=2,p.k=10,p.equilibrium_pos=vector(0,0,0),f=ρσ_interpolate_kwargs.call(this,cylinder,[ρσ_desugar_kwargs({pos:p.equilibrium_pos["+"](vector(0,1["-u"]()["*"](1),0)),axis:vector(0,1["-u"]()["*"](.5),0),radius:.1,color:color.white})]),m=vector(4,0,0),a.pos=m,a.velocity=vector(0,0,0),p.axis=a.pos["-"](1["*"](r.pos)),h=2["*"](pi)["*"](sqrt(a.m["/"](p.k))),_=sqrt(p.k["/"](a.m)),j.caption="The plot shows the block's position vs. time. The motion should be sinusoidal.\nTheoretical Period T = 2*pi*sqrt(m/k) = "["+"](ρσ_str.format("{:.2f}",h))["+"](" s"),d=ρσ_interpolate_kwargs.call(this,graph,[ρσ_desugar_kwargs({title:"Position vs. Time",xtitle:"Time (s)",ytitle:"Position (m)"})]),y=ρσ_interpolate_kwargs.call(this,gcurve,[ρσ_desugar_kwargs({color:color.green,label:"x-position"})]),v=m.x["-"](1["*"](p.equilibrium_pos.x)),g=ρσ_interpolate_kwargs.call(this,gcurve,[ρσ_desugar_kwargs({color:color.black,label:"A*cos(omega*t)"})]),await j.pause("Click to Start"),k=!0,M.__argnames__||Object.defineProperties(M,{__argnames__:{value:["evt"]},__module__:{value:null}}),j.bind("click",M);c["<"](2["*"](h));)await rate(100),k&&(b=a.pos["-"](1["*"](p.equilibrium_pos)),w=1["-u"]()["*"](p.k)["*"](b),a.acceleration=w["/"](a.m),a.velocity=a.velocity["+"](a.acceleration["*"](u)),a.pos=a.pos["+"](a.velocity["*"](u)),p.axis=a.pos["-"](1["*"](r.pos)),y.plot(c,a.pos.x),x=p.equilibrium_pos.x["+"](v["*"](cos(_["*"](c)))),g.plot(c,x),c=c["+"](u));t("Simulation finished."),P=ρσ_getitem(ρσ_getitem(z=y.data,0),0);var A=range(1,len(z));for(var C of A="function"==typeof A[Symbol.iterator]?A instanceof Map?A.keys():A:Object.keys(A))if(ρσ_getitem(ρσ_getitem(z,S=C),1)["<"](ρσ_getitem(ρσ_getitem(z,S["-"](1["*"](1))),1))&&ρσ_getitem(ρσ_getitem(z,S["-"](1["*"](2))),1)["<"](ρσ_getitem(ρσ_getitem(z,S["-"](1["*"](1))),1))){q=(T=ρσ_getitem(ρσ_getitem(z,S["-"](1["*"](1))),0))["-"](1["*"](P)),t("Measured Period from graph: "["+"](ρσ_str.format("{:.2f}",q))["+"](" s"));break}t("Theoretical Period: "["+"](ρσ_str.format("{:.2f}",h))["+"](" s"))}i.pythonize={},function(){function o(){if(o=set("capitalize strip lstrip rstrip islower isupper isspace lower upper swapcase center count endswith startswith find rfind index rindex format join ljust rjust partition rpartition replace split rsplit splitlines zfill".split(" ")),arguments.length)t=arguments[0]?Array.prototype.slice.call(arguments):null;else{var i;t=((i=ρσ_set()).jsset.add("split"),i.jsset.add("replace"),i)}t&&(o=o.difference(set(t)));var o,t,e,s=o;for(var l of s="function"==typeof s[Symbol.iterator]?s instanceof Map?s.keys():s:Object.keys(s))e=l,(ρσ_expr_temp=String.prototype)["number"==typeof e&&e<0?ρσ_expr_temp.length+e:e]=(ρσ_expr_temp=ρσ_str.prototype)["number"==typeof e&&e<0?ρσ_expr_temp.length+e:e]}o.__module__||Object.defineProperties(o,{__module__:{value:"pythonize"}}),i.pythonize.strings=o}(),o.__module__||Object.defineProperties(o,{__module__:{value:null}}),$(function(){window.__context={glowscript_container:$("#glowscript").removeAttr("id")},o()})}();
+//--><!]]></script>
+</div>
 
 ## 5. Student Workspace
 
