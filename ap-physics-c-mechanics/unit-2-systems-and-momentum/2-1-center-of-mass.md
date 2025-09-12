@@ -80,3 +80,89 @@ This is the final, working simulation. You can run it here to see the expected o
 Use the editor below to complete the `skeleton.py` file. You can edit the code and run it directly in your browser to test your work.
 
 <iframe src="https://trinket.io/embed/glowscript/38b1bff5d4fb" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+## Multiple Choice Questions
+
+### Conceptual Questions
+
+1.  A firecracker is thrown into the air. It explodes into many fragments. What happens to the center of mass of the system of fragments?
+    a)  It falls straight down from the point of explosion.
+    b)  It follows the same parabolic path as the firecracker would have if it had not exploded.
+    c)  Its motion becomes chaotic and unpredictable.
+    d)  It moves horizontally from the point of explosion.
+2.  Which of the following forces can change the velocity of the center of mass of a system?
+    a)  The force of a spring connecting two masses in the system.
+    b)  The force of gravity acting on the system.
+    c)  The force of an explosion within the system.
+    d)  All of the above.
+3.  Two objects of unequal mass are connected by a compressed spring. They are at rest on a frictionless surface. The spring is released. What can be said about the motion of the center of mass of the two-object system?
+    a)  It moves in the direction of the heavier mass.
+    b)  It moves in the direction of the lighter mass.
+    c)  It remains at rest.
+    d)  It oscillates back and forth.
+4.  A system consists of two particles. Under what condition is the center of mass of the system located at the midpoint between the two particles?
+    a)  The masses of the particles are equal.
+    b)  The velocities of the particles are equal.
+    c)  The net force on the system is zero.
+    d)  The particles are at rest.
+5.  The total momentum of a system of particles is equal to:
+    a)  The sum of the momenta of all the particles.
+    b)  The total mass of the system times the velocity of the center of mass.
+    c)  Both a and b are correct.
+    d)  Neither a nor b is correct.
+
+### Problem-Solving Questions
+
+6.  A 2 kg mass is at position (3, 0) and a 3 kg mass is at position (0, 5). What is the x-coordinate of the center of mass?
+    a)  1.2 m
+    b)  1.5 m
+    c)  2.0 m
+    d)  3.0 m
+7.  A 1 kg mass is moving with velocity (4, 0) m/s and a 3 kg mass is moving with velocity (0, -2) m/s. What is the velocity of the center of mass of the system?
+    a)  (1, -1.5) m/s
+    b)  (4, -6) m/s
+    c)  (1, -2) m/s
+    d)  (2, -3) m/s
+8.  A 5 kg object is subject to a net external force of (10, -20) N. What is the acceleration of the center of mass?
+    a)  (50, -100) m/s²
+    b)  (2, -4) m/s²
+    c)  (0.5, -0.25) m/s²
+    d)  (10, -20) m/s²
+9.  A 3 kg projectile is launched with an initial velocity of (10, 20) m/s. At the peak of its trajectory, it explodes into two fragments. One 1 kg fragment has a velocity of (5, 0) m/s immediately after the explosion. What is the velocity of the 2 kg fragment? (Neglect air resistance).
+    a)  (12.5, 0) m/s
+    b)  (5, 0) m/s
+    c)  (15, 0) m/s
+    d)  (25, 0) m/s
+10. A uniform flat plate is in the shape of a right triangle with vertices at (0,0), (L,0), and (0,H). What is the x-coordinate of its center of mass?
+    a)  L/2
+    b)  L/3
+    c)  2L/3
+    d)  L/4
+
+### Computational Questions
+
+11. In the simulation, the center of mass is calculated using `R_cm = (f1.m*f1.pos + f2.m*f2.pos + f3.m*f3.pos) / projectile.m`. Why is it valid to use `projectile.m` (the original mass) as the denominator?
+    a)  Because mass is conserved; the sum of the fragments' masses equals the original projectile's mass.
+    b)  It is an approximation that simplifies the calculation.
+    c)  The code should have summed the masses of the fragments individually.
+    d)  Because the fragments all have the same mass.
+12. The simulation updates the velocity of each fragment using `f.velocity = f.velocity + vector(0, -g, 0) * dt`. Why is there no term related to the explosion force in this line?
+    a)  The explosion force is an internal force and does not affect the motion of the individual fragments after the explosion.
+    b)  The explosion force acts only for an instant and its effect is already included in the initial velocities of the fragments right after the explosion.
+    c)  The explosion force is negligible compared to gravity.
+    d)  It is a simplification in the simulation.
+13. If you wanted to add air resistance to the simulation (e.g., a force `F_drag = -b*v²`), where would you add this force in the code?
+    a)  It would be added to the net external force used to calculate the acceleration of the center of mass.
+    b)  It would be applied to each fragment individually inside the `for` loop, affecting each fragment's acceleration.
+    c)  It would only affect the projectile before the explosion.
+    d)  It cannot be modeled in this type of simulation.
+14. What would you expect to see if the `cm_marker.pos` was set to the position of just one of the fragments (e.g., `cm_marker.pos = f1.pos`) instead of the calculated `R_cm`?
+    a)  The marker would still follow the original parabolic path.
+    b)  The marker would follow the path of that one fragment, which is a different parabola from the original path.
+    c)  The marker would stop at the point of explosion.
+    d)  The simulation would produce an error.
+15. The simulation demonstrates that the center of mass continues on its original trajectory. This is a direct consequence of:
+    a)  Conservation of energy.
+    b)  `F_net_external = M_total * a_cm`.
+    c)  Hooke's Law.
+    d)  The Euler-Cromer method.
