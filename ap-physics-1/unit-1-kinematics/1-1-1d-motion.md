@@ -81,7 +81,7 @@ By adding these lines in the correct order inside the `while` loop, you are tell
 
 This is the final, working simulation. You can run it here to see the expected outcome.
 
-<div class="glowscript" style="clear: both;">
+<div id="glowscript" class="glowscript">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link type="text/css" href="https://www.glowscript.org/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
 <link type="text/css" href="https://www.glowscript.org/css/ide.css" rel="stylesheet" />
