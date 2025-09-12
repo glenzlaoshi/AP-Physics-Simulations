@@ -6,7 +6,7 @@ layout: default
 
 ## 1. Introduction to the Unit: 2D Kinematics
 
-This topic builds directly on 1D Kinematics. Instead of moving in a straight line, objects can now move in a two-dimensional plane (e.g., both horizontally and vertically). 
+This topic builds directly on 1D Kinematics. Instead of moving in a straight line, objects can now move in a two-dimensional plane (e.g., both horizontally and vertically).
 
 The single most important concept in 2D kinematics is the **independence of perpendicular motion**. This powerful idea means we can analyze the horizontal (x-direction) motion of an object completely separately from its vertical (y-direction) motion. The two components do not affect each other. The only thing they share is time (`t`).
 
@@ -69,7 +69,7 @@ After the projectile is launched, what is its acceleration? The only force is gr
 
 #### **Task 4: Update Motion in the Loop**
 
-The animation loop runs as long as the projectile is above the ground (`while projectile.pos.y >= 0:`). Inside the loop, you must update the projectile's velocity and position. 
+The animation loop runs as long as the projectile is above the ground (`while projectile.pos.y >= 0:`). Inside the loop, you must update the projectile's velocity and position.
 
 The great thing about using vectors is that the code is **exactly the same** as it was for 1D motion! VPython handles the x and y components automatically.
 
@@ -80,7 +80,7 @@ Your task is to add the two lines for numerical integration into the loop, just 
 ## 4. Completed Simulation
 
 This is the final, working simulation. You can run it here to see the expected outcome.
-<div id="glowscript" class="glowscript">
+<div class="glowscript" style="clear: both;">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link type="text/css" href="https://www.glowscript.org/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
 <link type="text/css" href="https://www.glowscript.org/css/ide.css" rel="stylesheet" />
